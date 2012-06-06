@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.inf.evilstore.MetaEvilStore/src"
+    modelPluginID="hu.bme.mit.inf.evilstore.MetaEvilStore" modelName="Evilsystem"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    binaryCompatibleReflectiveMethods="true">
+  <foreignModel>evilsystem.ecore</foreignModel>
+  <genPackages prefix="Evilsystem" disposableProviderFactory="true" ecorePackage="evilsystem.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="evilsystem.ecore#//Platform">
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//Platform/OSGi"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//Platform/dotNet"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="evilsystem.ecore#//MethodType">
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/HEAD"/>
+      <genEnumLiterals ecoreEnumLiteral="evilsystem.ecore#//MethodType/OPTIONS"/>
+    </genEnums>
+    <genClasses ecoreClass="evilsystem.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//System/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//System/systemNameSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//SimpleType"/>
+    <genClasses ecoreClass="evilsystem.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Entity/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Entity/queries"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Entity/superClass"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="evilsystem.ecore#//NamedObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//NamedObject/name"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//Attribute"/>
+    <genClasses ecoreClass="evilsystem.ecore#//Function">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Function/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//Function/methodType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Function/queries"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//Parameter"/>
+    <genClasses ecoreClass="evilsystem.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Service/functions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//Service/path"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference evilsystem.ecore#//Service/component"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="evilsystem.ecore#//PackageElement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference evilsystem.ecore#//PackageElement/system"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//Type"/>
+    <genClasses image="false" ecoreClass="evilsystem.ecore#//TypeReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilsystem.ecore#//TypeReference/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//TypeReference/collection"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//Component/platform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evilsystem.ecore#//Component/services"/>
+    </genClasses>
+    <genClasses ecoreClass="evilsystem.ecore#//NamedQuery">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evilsystem.ecore#//NamedQuery/referred"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evilsystem.ecore#//NamedQuery/query"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

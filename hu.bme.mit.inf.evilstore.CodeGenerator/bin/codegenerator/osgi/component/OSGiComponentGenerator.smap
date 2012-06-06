@@ -1,0 +1,28 @@
+SMAP
+OSGiComponentGenerator.java
+Xtend
+*S Xtend
+*F
++ 0 OSGiComponentGenerator.xtend
+src/codegenerator/osgi/component/OSGiComponentGenerator.xtend
+*L
+14:19,5
+16:24,8
+14:32
+16:33,3
+14:36,2
+16:38,2
+14:40
+17:41,2
+14:43
+17:44,4
+18:48,17
+20:65,13
+14:78,3
+22:81,2
+23:83,12
+25:95,9
+14:104,2
+27:106,3
+14:109
+*E

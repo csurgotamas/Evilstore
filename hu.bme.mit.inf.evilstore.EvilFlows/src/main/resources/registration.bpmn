@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_nameItem" structureRef="String" />
+  <itemDefinition id="_passwordItem" structureRef="String" />
+  <itemDefinition id="_registrationServicePathItem" structureRef="String" />
+  <itemDefinition id="_passwordCheckerURLItem" structureRef="String" />
+  <itemDefinition id="_passwordHashItem" structureRef="Integer" />
+  <itemDefinition id="_passwordCheckerMethodItem" structureRef="String" />
+  <itemDefinition id="_registerURLItem" structureRef="String" />
+  <itemDefinition id="_registerMethodItem" structureRef="Object" />
+  <itemDefinition id="_registrationResultItem" structureRef="Boolean" />
+  <itemDefinition id="_UserLoginURLItem" structureRef="String" />
+  <itemDefinition id="_UserLoginMethodItem" structureRef="Object" />
+  <itemDefinition id="_getAccountOfUserURLItem" structureRef="String" />
+  <itemDefinition id="_getAccountOfUserMethodItem" structureRef="Object" />
+  <itemDefinition id="_transferMoneyURLItem" structureRef="String" />
+  <itemDefinition id="_transferMoneyMethodItem" structureRef="String" />
+  <itemDefinition id="_userIDItem" structureRef="String" />
+  <itemDefinition id="_birthItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="hu.bme.mit.wf.registration" name="Sample Process" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="name" itemSubjectRef="_nameItem"/>
+    <property id="password" itemSubjectRef="_passwordItem"/>
+    <property id="registrationServicePath" itemSubjectRef="_registrationServicePathItem"/>
+    <property id="passwordCheckerURL" itemSubjectRef="_passwordCheckerURLItem"/>
+    <property id="passwordHash" itemSubjectRef="_passwordHashItem"/>
+    <property id="passwordCheckerMethod" itemSubjectRef="_passwordCheckerMethodItem"/>
+    <property id="registerURL" itemSubjectRef="_registerURLItem"/>
+    <property id="registerMethod" itemSubjectRef="_registerMethodItem"/>
+    <property id="registrationResult" itemSubjectRef="_registrationResultItem"/>
+    <property id="UserLoginURL" itemSubjectRef="_UserLoginURLItem"/>
+    <property id="UserLoginMethod" itemSubjectRef="_UserLoginMethodItem"/>
+    <property id="getAccountOfUserURL" itemSubjectRef="_getAccountOfUserURLItem"/>
+    <property id="getAccountOfUserMethod" itemSubjectRef="_getAccountOfUserMethodItem"/>
+    <property id="transferMoneyURL" itemSubjectRef="_transferMoneyURLItem"/>
+    <property id="transferMoneyMethod" itemSubjectRef="_transferMoneyMethodItem"/>
+    <property id="userID" itemSubjectRef="_userIDItem"/>
+    <property id="birth" itemSubjectRef="_birthItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_3" name="GetLoginData" tns:taskName="GetLoginData" >
+      <ioSpecification>
+        <dataInput id="_3_nameInput" name="name" />
+        <dataInput id="_3_passwordInput" name="password" />
+        <dataOutput id="_3_nameOutput" name="name" />
+        <dataOutput id="_3_passwordOutput" name="password" />
+        <inputSet>
+          <dataInputRefs>_3_nameInput</dataInputRefs>
+          <dataInputRefs>_3_passwordInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_nameOutput</dataOutputRefs>
+          <dataOutputRefs>_3_passwordOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_3_nameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>password</sourceRef>
+        <targetRef>_3_passwordInput</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_nameOutput</sourceRef>
+        <targetRef>name</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_passwordOutput</sourceRef>
+        <targetRef>password</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_5" name="FlowConfig" >
+      <script>kcontext.setVariable("passwordCheckerURL", "http://localhost:8082/PasswordManagement/Services/PasswordManagement.svc/generatePasswordHash");
+kcontext.setVariable("passwordCheckerMethod", "GET");
+kcontext.setVariable("registerURL", "http://localhost:8081/Registration/registerNewUser");
+kcontext.setVariable("registerMethod", "PUT");
+kcontext.setVariable("UserLoginURL", "http://localhost:8081/Registration/login");
+kcontext.setVariable("UserLoginMethod", "GET");
+kcontext.setVariable("getAccountOfUserURL", "http://localhost:8081/AccountManagement/getAccountOfUser");
+kcontext.setVariable("getAccountOfUserMethod", "GET");
+kcontext.setVariable("transferMoneyURL", "http://localhost:8081/AccountManagement/transferMoney");
+kcontext.setVariable("transferMoneyMethod", "POST");</script>
+    </scriptTask>
+    <task id="_6" name="PasswordHash" tns:taskName="PasswordHash" >
+      <ioSpecification>
+        <dataInput id="_6_passwordCheckerURLInput" name="passwordCheckerURL" />
+        <dataInput id="_6_passwordInput" name="password" />
+        <dataInput id="_6_passwordCheckerMethodInput" name="passwordCheckerMethod" />
+        <dataOutput id="_6_passwordHashOutput" name="passwordHash" />
+        <inputSet>
+          <dataInputRefs>_6_passwordCheckerURLInput</dataInputRefs>
+          <dataInputRefs>_6_passwordInput</dataInputRefs>
+          <dataInputRefs>_6_passwordCheckerMethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_passwordHashOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>passwordCheckerURL</sourceRef>
+        <targetRef>_6_passwordCheckerURLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>password</sourceRef>
+        <targetRef>_6_passwordInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>passwordCheckerMethod</sourceRef>
+        <targetRef>_6_passwordCheckerMethodInput</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_passwordHashOutput</sourceRef>
+        <targetRef>passwordHash</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_7" name="Registrate" tns:taskName="Registrate" >
+      <ioSpecification>
+        <dataInput id="_7_registerMethodInput" name="registerMethod" />
+        <dataInput id="_7_nameInput" name="name" />
+        <dataInput id="_7_passwordHashInput" name="passwordHash" />
+        <dataInput id="_7_registerURLInput" name="registerURL" />
+        <dataOutput id="_7_registrationResultOutput" name="registrationResult" />
+        <inputSet>
+          <dataInputRefs>_7_registerMethodInput</dataInputRefs>
+          <dataInputRefs>_7_nameInput</dataInputRefs>
+          <dataInputRefs>_7_passwordHashInput</dataInputRefs>
+          <dataInputRefs>_7_registerURLInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_7_registrationResultOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>registerMethod</sourceRef>
+        <targetRef>_7_registerMethodInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_7_nameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>passwordHash</sourceRef>
+        <targetRef>_7_passwordHashInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>registerURL</sourceRef>
+        <targetRef>_7_registerURLInput</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_7_registrationResultOutput</sourceRef>
+        <targetRef>registrationResult</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_8" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_9" name="Failure" >
+      <script>System.out.println("A regisztráció sikertelen, mivel már van ilyen nevû felhasználó!");</script>
+    </scriptTask>
+    <scriptTask id="_10" name="Success" >
+      <script>System.out.println("Sikeresen regisztrált a rendszerünkbe!");</script>
+    </scriptTask>
+    <task id="_12" name="UserLogin" tns:taskName="UserLogin" >
+      <ioSpecification>
+        <dataInput id="_12_MethodInput" name="Method" />
+        <dataInput id="_12_URLInput" name="URL" />
+        <dataInput id="_12_UsenameInput" name="Usename" />
+        <dataOutput id="_12_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_12_MethodInput</dataInputRefs>
+          <dataInputRefs>_12_URLInput</dataInputRefs>
+          <dataInputRefs>_12_UsenameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_12_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>UserLoginMethod</sourceRef>
+        <targetRef>_12_MethodInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>UserLoginURL</sourceRef>
+        <targetRef>_12_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_12_UsenameInput</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_12_retOutput</sourceRef>
+        <targetRef>userID</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_14" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_15" name="TransferMoney" tns:taskName="TransferMoney" >
+      <ioSpecification>
+        <dataInput id="_15_userIDInput" name="userID" />
+        <dataInput id="_15_getAccountOfUserURLInput" name="getAccountOfUserURL" />
+        <dataInput id="_15_transferMoneyURLInput" name="transferMoneyURL" />
+        <dataInput id="_15_getAccountOfUserMethodInput" name="getAccountOfUserMethod" />
+        <dataInput id="_15_transferMoneyMethodInput" name="transferMoneyMethod" />
+        <inputSet>
+          <dataInputRefs>_15_userIDInput</dataInputRefs>
+          <dataInputRefs>_15_getAccountOfUserURLInput</dataInputRefs>
+          <dataInputRefs>_15_transferMoneyURLInput</dataInputRefs>
+          <dataInputRefs>_15_getAccountOfUserMethodInput</dataInputRefs>
+          <dataInputRefs>_15_transferMoneyMethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>userID</sourceRef>
+        <targetRef>_15_userIDInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>getAccountOfUserURL</sourceRef>
+        <targetRef>_15_getAccountOfUserURLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>transferMoneyURL</sourceRef>
+        <targetRef>_15_transferMoneyURLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>getAccountOfUserMethod</sourceRef>
+        <targetRef>_15_getAccountOfUserMethodInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>transferMoneyMethod</sourceRef>
+        <targetRef>_15_transferMoneyMethodInput</targetRef>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_9-_2" sourceRef="_9" targetRef="_2" />
+    <sequenceFlow id="_5-_3" sourceRef="_5" targetRef="_3" />
+    <sequenceFlow id="_1-_5" sourceRef="_1" targetRef="_5" />
+    <sequenceFlow id="_3-_6" sourceRef="_3" targetRef="_6" />
+    <sequenceFlow id="_6-_7" sourceRef="_6" targetRef="_7" />
+    <sequenceFlow id="_7-_8" sourceRef="_7" targetRef="_8" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" name="registration_failed" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return ! kcontext.getVariable("registrationResult");</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_8-_10" sourceRef="_8" targetRef="_10" name="successful_registration" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return kcontext.getVariable("registrationResult");</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_10-_12" sourceRef="_10" targetRef="_12" />
+    <sequenceFlow id="_15-_14" sourceRef="_15" targetRef="_14" />
+    <sequenceFlow id="_12-_15" sourceRef="_12" targetRef="_15" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="hu.bme.mit.wf.registration" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="45" y="45" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="436" y="362" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="315" y="51" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="151" y="49" width="90" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="528" y="57" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="539" y="171" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="432" y="174" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="420" y="271" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="219" y="174" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="71" y="174" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="103" y="352" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="56" y="274" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_9-_2" >
+        <di:waypoint x="460" y="295" />
+        <di:waypoint x="460" y="386" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_3" >
+        <di:waypoint x="196" y="73" />
+        <di:waypoint x="365" y="75" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_5" >
+        <di:waypoint x="69" y="69" />
+        <di:waypoint x="196" y="73" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_6" >
+        <di:waypoint x="365" y="75" />
+        <di:waypoint x="578" y="81" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_7" >
+        <di:waypoint x="578" y="81" />
+        <di:waypoint x="589" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_8" >
+        <di:waypoint x="589" y="195" />
+        <di:waypoint x="456" y="198" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="456" y="198" />
+        <di:waypoint x="460" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_10" >
+        <di:waypoint x="456" y="198" />
+        <di:waypoint x="259" y="198" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_12" >
+        <di:waypoint x="259" y="198" />
+        <di:waypoint x="121" y="198" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_14" >
+        <di:waypoint x="116" y="298" />
+        <di:waypoint x="127" y="376" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_15" >
+        <di:waypoint x="121" y="198" />
+        <di:waypoint x="116" y="298" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

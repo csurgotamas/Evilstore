@@ -1,0 +1,15 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "SetValidated",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "AppId": new StringDataType(),
+      "IsValid": new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "SetValidated",
+    "icon" : "icons/webservice.gif"
+  ]
+]

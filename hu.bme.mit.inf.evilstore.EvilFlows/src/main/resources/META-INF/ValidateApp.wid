@@ -1,0 +1,14 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "ValidateApp",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "ProgData": new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "ValidateApp",
+    "icon" : "icons/webservice.gif"
+  ]
+]

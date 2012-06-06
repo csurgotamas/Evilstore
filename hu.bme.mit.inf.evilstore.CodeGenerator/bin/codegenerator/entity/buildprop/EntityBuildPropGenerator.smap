@@ -1,0 +1,10 @@
+SMAP
+EntityBuildPropGenerator.java
+Xtend
+*S Xtend
+*F
++ 0 EntityBuildPropGenerator.xtend
+src/codegenerator/entity/buildprop/EntityBuildPropGenerator.xtend
+*L
+12:14,22
+*E

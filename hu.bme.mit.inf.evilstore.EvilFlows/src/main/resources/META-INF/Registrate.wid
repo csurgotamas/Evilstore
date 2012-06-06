@@ -1,0 +1,14 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+
+[
+	[
+		"name" : "Registrate",
+		"parameters" : [
+			"URL" : new StringDataType(),
+			"BookTitle" : new StringDataType(),
+			"Method" : new StringDataType()
+		],
+		"displayName" : "Registrate",
+		"icon" : "icons/webservice.gif"
+	]
+]

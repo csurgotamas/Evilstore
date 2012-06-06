@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/osgiruncfg"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.osgi.service.http.port=8081 -Declipse.ignoreApp=true -Dosgi.noShutdown=true"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="com.eclipsesource.jaxrs.connector@default:default,com.sun.jersey.jersey-client@default:default,com.sun.jersey.jersey-core@default:default,com.sun.jersey.jersey-json@default:default,com.sun.jersey.jersey-server@default:default,com.sun.jersey.jersey-servlet@default:default,hu.bme.mit.mdsd.appstore.customerbehaviour@default:default,jackson-core-asl@default:default,jackson-jaxrs@default:default,jackson-mapper-asl@default:default,javax.activation*1.1.0.v201108011116@default:default,javax.inject@default:default,javax.jms@default:default,javax.mail@default:default,javax.persistence@default:default,javax.resource@default:default,javax.servlet.jsp@default:default,javax.servlet@default:default,javax.transaction@default:default,org.antlr.generator@default:default,org.antlr.runtime@default:default,org.apache.ant@default:default,org.apache.commons.el@default:default,org.apache.commons.logging*1.1.1.v201101211721@default:default,org.apache.derby@default:default,org.apache.jasper@default:default,org.codehaus.jettison.jettison@default:default,org.eclipse.ant.core@default:default,org.eclipse.core.contenttype@default:default,org.eclipse.core.expressions@default:default,org.eclipse.core.filesystem.win32.x86@default:false,org.eclipse.core.filesystem@default:default,org.eclipse.core.jobs@default:default,org.eclipse.core.resources.win32.x86@default:false,org.eclipse.core.resources@default:default,org.eclipse.core.runtime.compatibility.auth@default:default,org.eclipse.core.runtime.compatibility.registry@default:false,org.eclipse.core.runtime@default:true,org.eclipse.core.variables@default:default,org.eclipse.emf.common@default:default,org.eclipse.emf.ecore.xmi@default:default,org.eclipse.emf.ecore@default:default,org.eclipse.equinox.app@default:default,org.eclipse.equinox.common@2:true,org.eclipse.equinox.ds@1:true,org.eclipse.equinox.http.jetty@default:default,org.eclipse.equinox.http.registry@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.equinox.preferences@default:default,org.eclipse.equinox.registry@default:default,org.eclipse.equinox.util@default:default,org.eclipse.osgi.services@default:default,org.eclipse.osgi@-1:true,org.eclipse.persistence.antlr@default:default,org.eclipse.persistence.asm@default:default,org.eclipse.persistence.core@default:default,org.eclipse.persistence.jpa.equinox.weaving@default:false,org.eclipse.persistence.jpa.equinox@default:false,org.eclipse.persistence.jpa.osgi@default:default,org.eclipse.persistence.jpa@default:default,org.eclipse.persistence.oracle@default:false,org.eclipse.team.core@default:default,org.mortbay.jetty.server@default:default,org.mortbay.jetty.util@default:default,org.objectweb.asm@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="hu.bme.mit.inf.evilstore.AccountManagement@default:default,hu.bme.mit.inf.evilstore.ApplicationBuy@default:default,hu.bme.mit.inf.evilstore.ApplicationGenius@default:default,hu.bme.mit.inf.evilstore.DataBaseFiller@default:default,hu.bme.mit.inf.evilstore.UploadApplication@default:default,hu.bme.mit.inf.evilstore.UserManagement@default:default,hu.bme.mit.inf.evilstore.ViewApplications@default:default,hu.bme.mit.inf.evilstore.entities@default:default"/>
+</launchConfiguration>

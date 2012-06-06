@@ -1,0 +1,95 @@
+package hu.bme.mit.inf.evilstore.evilconstraints
+
+import "http://evilsystem/1.0"
+
+
+// Körmentesség kényszer
+@Constraint(message = "Az alábbi entitás kört alkot: $E.name$", severity = "error", location = "E")
+pattern ACyclic(E:Entity)={
+	find ReachAble(E,E);
+	
+}
+pattern ReachAble(A:Entity,B:Entity)={
+	Entity.superClass(A,B);
+}or{
+	Entity.superClass(A,K);
+	find ReachAble(K,B);
+}
+
+// Nincs két ugyanolyan nevû objektum kényszer (Attributumokat és Paremétereket kivéve)
+@Constraint(message = "Az alábbi néven több objektum is szerepel: $NO1.name$",severity="error", location="NO1")
+pattern SameName(NO1:NamedObject,NO2:NamedObject)={
+	NamedObject.name(NO1,Name);
+	NamedObject.name(NO2,Name);
+	NO1!=NO2;
+	neg find AttrsParams(NO1);
+	neg find AttrsParams(NO2);
+}
+pattern AttrsParams(AP)={
+	Parameter(AP);
+}or{
+	Attribute(AP);
+}
+
+// Nem használt típusok kényszer
+@Constraint(message = "Az alábbi Típus nincs használva: $T.name$",severity="warning", location="T")
+pattern TypesNotUsed(T:Type)={
+	neg find TypedRef(T);
+}
+pattern TypedRef(T:Type)={
+	TypeReference.type(TR,T);
+}
+
+// Egy komponenshez maximum egy szolgáltatás tartozhat kényszer
+@Constraint(message = "Az alábbi komponensnek egynél több szolgáltatása van: $C.name$", severity="error", location="C")
+pattern Max1Service(C:Component)={
+	find ComponentService(C,S1);
+	find ComponentService(C,S2);
+	S1!=S2;
+}
+
+pattern ComponentService(C:Component,S:Service)={
+	Component.services(C,S);
+}
+
+// Nincs üres nevû objektum kényszer
+@Constraint(message = "Az alábbi objektumnak nincs neve:", severity="error", location="NO")
+pattern EmptyNamedObj(NO:NamedObject)={
+	NamedObject.name(NO,"");
+}
+
+// Nincs üres nevû szolgáltatás kényszer
+@Constraint(message = "Az alábbi szolgáltatásnaknak nincs neve:", severity="error", location="S")
+pattern EmptyPathService(S:Service)={
+	Service.path(S,"");
+}
+
+// Név validáció (generated with notepad)
+@Constraint(message = "Az alábbi nevû objektum nem valid: $NO.name$", severity="error", location="NO")
+pattern IsValidName(NO:NamedObject)={
+	 NamedObject.name(NO,"abstract");  } or { NamedObject.name(NO,"continue"); 
+	} or { NamedObject.name(NO,"for");  } or { NamedObject.name(NO,"new"); 
+	} or { NamedObject.name(NO,"switch");  } or { NamedObject.name(NO,"assert"); 
+	} or { NamedObject.name(NO,"default");  } or { NamedObject.name(NO,"goto"); 
+	} or { NamedObject.name(NO,"package");  } or { NamedObject.name(NO,"synchronized");  
+	} or { NamedObject.name(NO,"boolean");  } or { NamedObject.name(NO,"do");  
+	} or { NamedObject.name(NO,"if");  } or { NamedObject.name(NO,"private");  
+	} or { NamedObject.name(NO,"this");  } or { NamedObject.name(NO,"break");  
+	} or { NamedObject.name(NO,"double");  } or { NamedObject.name(NO,"implements");  
+	} or { NamedObject.name(NO,"protected");  } or { NamedObject.name(NO,"throw");  
+	} or { NamedObject.name(NO,"byte");  } or { NamedObject.name(NO,"else");  
+	} or { NamedObject.name(NO,"import");  } or { NamedObject.name(NO,"public");  
+	} or { NamedObject.name(NO,"throws");  } or { NamedObject.name(NO,"case");  
+	} or { NamedObject.name(NO,"enum");  } or { NamedObject.name(NO,"instanceof");  
+	} or { NamedObject.name(NO,"return");  } or { NamedObject.name(NO,"transient");  
+	} or { NamedObject.name(NO,"catch");  } or { NamedObject.name(NO,"extends");  
+	} or { NamedObject.name(NO,"int");  } or { NamedObject.name(NO,"short");  
+	} or { NamedObject.name(NO,"try");  } or { NamedObject.name(NO,"char");  
+	} or { NamedObject.name(NO,"final");  } or { NamedObject.name(NO,"interface");  
+	} or { NamedObject.name(NO,"static");  } or { NamedObject.name(NO,"void");  
+	} or { NamedObject.name(NO,"class");  } or { NamedObject.name(NO,"finally");  
+	} or { NamedObject.name(NO,"long");  } or { NamedObject.name(NO,"strictfp");  
+	} or { NamedObject.name(NO,"volatile");  } or { NamedObject.name(NO,"const");  
+	} or { NamedObject.name(NO,"float");  } or { NamedObject.name(NO,"native");  
+	} or { NamedObject.name(NO,"super");  } or { NamedObject.name(NO,"while");
+}

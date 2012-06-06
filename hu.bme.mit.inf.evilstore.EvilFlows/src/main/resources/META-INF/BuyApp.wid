@@ -1,0 +1,15 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "BuyApp",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "AppID": new StringDataType(),
+      "UserID": new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "BuyApp",
+    "icon" : "icons/webservice.gif"
+  ]
+]

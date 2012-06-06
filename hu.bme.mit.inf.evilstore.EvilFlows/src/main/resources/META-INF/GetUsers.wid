@@ -1,0 +1,13 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "GetUsers",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "GetUsers",
+    "icon" : "icons/webservice.gif"
+  ]
+]

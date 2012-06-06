@@ -1,0 +1,2 @@
+<%@ ServiceHost Language="C#" Debug="true" Service="Appstore.ApplicationValidation.Services.ValidationService" CodeBehind="Validation.svc.cs"
+Factory ="System.ServiceModel.Activation.WebServiceHostFactory" %>

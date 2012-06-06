@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_appnameItem" structureRef="String" />
+  <itemDefinition id="_developeridItem" structureRef="String" />
+  <itemDefinition id="_versionItem" structureRef="String" />
+  <itemDefinition id="_descItem" structureRef="String" />
+  <itemDefinition id="_costItem" structureRef="String" />
+  <itemDefinition id="_progfileItem" structureRef="String" />
+  <itemDefinition id="_apptypeItem" structureRef="String" />
+  <itemDefinition id="_osgiuploadAddressItem" structureRef="Object" />
+  <itemDefinition id="_ageRestrictItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="hu.bme.mit.wf.upload" name="Sample Process" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="appname" itemSubjectRef="_appnameItem"/>
+    <property id="developerid" itemSubjectRef="_developeridItem"/>
+    <property id="version" itemSubjectRef="_versionItem"/>
+    <property id="desc" itemSubjectRef="_descItem"/>
+    <property id="cost" itemSubjectRef="_costItem"/>
+    <property id="progfile" itemSubjectRef="_progfileItem"/>
+    <property id="apptype" itemSubjectRef="_apptypeItem"/>
+    <property id="osgiuploadAddress" itemSubjectRef="_osgiuploadAddressItem"/>
+    <property id="ageRestrict" itemSubjectRef="_ageRestrictItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_3" name="UploadApp" tns:taskName="UploadApp" >
+      <ioSpecification>
+        <dataInput id="_3_CostInput" name="Cost" />
+        <dataInput id="_3_AgeRestrictionInput" name="AgeRestriction" />
+        <dataInput id="_3_DeveloperIdInput" name="DeveloperId" />
+        <dataInput id="_3_ProgFileInput" name="ProgFile" />
+        <dataInput id="_3_AppNameInput" name="AppName" />
+        <dataInput id="_3_VersionInput" name="Version" />
+        <dataInput id="_3_URLInput" name="URL" />
+        <dataInput id="_3_DescInput" name="Desc" />
+        <dataInput id="_3_AppTypeInput" name="AppType" />
+        <dataInput id="_3_MethodInput" name="Method" />
+        <inputSet>
+          <dataInputRefs>_3_CostInput</dataInputRefs>
+          <dataInputRefs>_3_AgeRestrictionInput</dataInputRefs>
+          <dataInputRefs>_3_DeveloperIdInput</dataInputRefs>
+          <dataInputRefs>_3_ProgFileInput</dataInputRefs>
+          <dataInputRefs>_3_AppNameInput</dataInputRefs>
+          <dataInputRefs>_3_VersionInput</dataInputRefs>
+          <dataInputRefs>_3_URLInput</dataInputRefs>
+          <dataInputRefs>_3_DescInput</dataInputRefs>
+          <dataInputRefs>_3_AppTypeInput</dataInputRefs>
+          <dataInputRefs>_3_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>cost</sourceRef>
+        <targetRef>_3_CostInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>ageRestrict</sourceRef>
+        <targetRef>_3_AgeRestrictionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>developerid</sourceRef>
+        <targetRef>_3_DeveloperIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>progfile</sourceRef>
+        <targetRef>_3_ProgFileInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>appname</sourceRef>
+        <targetRef>_3_AppNameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>version</sourceRef>
+        <targetRef>_3_VersionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>osgiuploadAddress</sourceRef>
+        <targetRef>_3_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>desc</sourceRef>
+        <targetRef>_3_DescInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>apptype</sourceRef>
+        <targetRef>_3_AppTypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PUT</from>
+          <to xsi:type="tFormalExpression">_3_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_4" name="FlowControl" >
+      <script>kcontext.setVariable("osgiuploadAddress", "http://localhost:8081/UploadApplication/upload");
+kcontext.setVariable("appname", "Evilasda");
+kcontext.setVariable("developerid", "10");
+kcontext.setVariable("version", "1");
+kcontext.setVariable("desc", "asdasdasd dasasdas fos");
+kcontext.setVariable("cost", "5000");
+kcontext.setVariable("progfile", "This is not Evil");
+kcontext.setVariable("apptype","[\"t1\",\"t2\",\"t3\"]");
+kcontext.setVariable("ageRestric", "18");</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_3-_2" sourceRef="_3" targetRef="_2" />
+    <sequenceFlow id="_4-_3" sourceRef="_4" targetRef="_3" />
+    <sequenceFlow id="_1-_4" sourceRef="_1" targetRef="_4" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="hu.bme.mit.wf.upload" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="45" y="45" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="525" y="56" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="379" y="55" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="131" y="47" width="101" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_3-_2" >
+        <di:waypoint x="429" y="79" />
+        <di:waypoint x="549" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_3" >
+        <di:waypoint x="181" y="71" />
+        <di:waypoint x="429" y="79" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_4" >
+        <di:waypoint x="69" y="69" />
+        <di:waypoint x="181" y="71" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

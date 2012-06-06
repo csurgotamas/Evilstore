@@ -1,0 +1,13 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "GetSimilarity",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "GetSimilarity",
+    "icon" : "icons/webservice.gif"
+  ]
+]

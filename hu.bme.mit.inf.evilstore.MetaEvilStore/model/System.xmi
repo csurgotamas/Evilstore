@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<evilsystem:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:evilsystem="http://evilsystem/1.0" xsi:schemaLocation="http://evilsystem/1.0 evilsystem.ecore">
+  <packages name="A">
+    <elementsInPackage xsi:type="evilsystem:Entity" name="Debreceni">
+      <attributes name="k" type="//@packages.0/@elementsInPackage.1"/>
+      <attributes name="k2" type="//@packages.0/@elementsInPackage.1"/>
+    </elementsInPackage>
+    <elementsInPackage xsi:type="evilsystem:SimpleType" name="Kolbasz"/>
+  </packages>
+</evilsystem:System>

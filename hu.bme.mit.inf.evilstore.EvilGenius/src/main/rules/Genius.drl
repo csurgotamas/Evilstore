@@ -1,0 +1,160 @@
+#created on: 2012.05.03.
+package hu.bme.mit.inf.evilstore.evilgenius
+
+#list any import classes here.
+
+import hu.bme.mit.inf.evilstore.evilgenius.GeniusMain;
+import hu.bme.mit.evilsystem.entities.Application;
+import hu.bme.mit.evilsystem.entities.Purchase;
+import hu.bme.mit.evilsystem.entities.ApplicationDescription;
+import hu.bme.mit.evilsystem.entities.User;
+import hu.bme.mit.evilsystem.entities.CustomerSimilarityScore;
+import hu.bme.mit.evilsystem.entities.Developer;
+import hu.bme.mit.inf.evilstore.evilgenius.SelectedUser;
+import java.util.ArrayList;
+
+#declare any global variables here
+
+
+//konstansok a közelmúltban népszerû alkalmazásokhoz
+global Double downloadLimit;
+global Double costLimit;
+
+
+//kiveszi a megvásárolt alkalmazásokat
+rule "Owned Applications"
+salience 50
+
+    when
+    	sUser : SelectedUser($user : user)
+    	app : Application()
+    	userPurchase : Purchase() from $user.getPurchasedApplications()
+    	eval (app.getId() == userPurchase.getApplication().getId())
+    then
+    	System.out.println("Kivettem, mert megvan! " + app.getApplicationName());
+    	sUser.removeApplication(app);
+
+end
+
+//kiveszi a korban nem egyezõ alkalmazásokat
+rule "Age Controlling"
+salience 50
+
+	when
+		sUser : SelectedUser()
+		app : Application()
+		eval (!sUser.isGoodAge(app))
+	then
+		System.out.println("Kivettem, mert nem megfelelõ a korhatár! " + app.getApplicationName());
+		sUser.removeApplication(app);
+
+end
+
+//hozzáadja a még bentlévõ alkalmazásokat a kiválasztott user score listájához
+rule "Add Scoreable Applications"
+salience 120
+
+	when
+		sUser : SelectedUser()
+		app : Application()
+	then
+		sUser.addApplicationToScore(app);
+	
+end
+
+
+//közelmúltban népszerû alkalmazások
+rule "Popular Applications"
+salience 100
+
+	when
+		sUser : SelectedUser()
+		user : User()
+		purchase : Purchase(app : application) from user.getPurchasedApplications()
+	then
+		//double value = (app.getDownloadNumber() / downloadLimit.doubleValue() + app.getCost() / costLimit.doubleValue())*sUser.getPopularWeight();
+		double value = 1.0 / downloadLimit.doubleValue();
+		System.out.println("Növeltem a pontot, mert népszerû az alkalmazás! " + app.getApplicationName());
+		sUser.incrementApplicationScore(app, value);
+
+end
+
+
+//drága alkalmazások
+rule "Expensive Applications"
+salience 100
+
+	when
+		sUser : SelectedUser()
+		app : Application()
+	then
+		//double value = (app.getDownloadNumber() / downloadLimit.doubleValue() + app.getCost() / costLimit.doubleValue())*sUser.getPopularWeight();
+		double value = app.getCost().intValue() / downloadLimit.doubleValue();
+		System.out.println("Növeltem a pontot, mert drága az alkalmazás! " + app.getApplicationName());
+		sUser.incrementApplicationScore(app, value);
+
+end
+
+
+//készítõk mûveinek elõnyben részesítése
+rule "Most Wanted Developer"
+salience 100
+
+	when
+		sUser : SelectedUser($user : user)
+		ownedPurchase : Purchase(ownedApp : application) from $user.getPurchasedApplications()
+		otherApp : Application()
+		eval (ownedApp.getDeveloperId().longValue() == otherApp.getDeveloperId().longValue())
+	then
+		double value = sUser.getDeveloperWeight();
+		System.out.println("Növeltem a pontot, mert egyezik a fejlesztõ! " + otherApp.getApplicationName());
+		sUser.incrementApplicationScore(otherApp, value);
+
+end
+
+
+//kategória mûveinek elõnyben részesítése
+rule "Most Wanted Category"
+salience 100
+
+	when
+		sUser : SelectedUser($user : user)
+		ownedPurchase : Purchase($ownedDesc : application.description) from $user.getPurchasedApplications()
+		otherApp : Application($otherDesc : description)
+		ownedType : String() from $ownedDesc.getApplicationType()
+		otherType : String() from $otherDesc.getApplicationType()
+    	//eval (sUser.countSimilarApplicationType(ownedPurchase.getApplication(), otherApp) > 0)
+    	eval (ownedType.equals(otherType))
+	then
+		double value = sUser.getCategoryWeight();
+		System.out.println("Növeltem a pontot, mert egyezik a kategória! " + otherApp.getApplicationName());
+		sUser.incrementApplicationScore(otherApp, value);
+end
+
+
+rule "Similar Users"
+salience 100
+
+	when
+		sUser : SelectedUser($user : user)
+		otherUser : User()
+		similarity : CustomerSimilarityScore()
+		purchase : Purchase(otherApp : application) from otherUser.getPurchasedApplications()
+		eval ($user.getId() == similarity.getUser1ID().longValue() && otherUser.getId() == similarity.getUser2ID().longValue())
+	then
+		double value = similarity.getScore().doubleValue();
+		System.out.println("Növeltem a pontot, mert találtam hasonló felhasználót! " + otherApp.getApplicationName());
+		sUser.incrementApplicationScore(otherApp, value);
+		
+	
+end
+
+//kiírja a meglévõ alkalmazásokat
+/*rule "Write Current Applications"
+    #include attributes such as "salience" here...
+    when
+        app : Application()
+    then
+        System.out.println(app.getName());
+
+end*/

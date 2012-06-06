@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evilsystem:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:evilsystem="http://evilsystem/1.0" systemNameSpace="hu.bme.mit.inf.evilstore">
+  <elements xsi:type="evilsystem:SimpleType" name="Boolean"/>
+  <elements xsi:type="evilsystem:SimpleType" name="Integer"/>
+  <elements xsi:type="evilsystem:SimpleType" name="Long"/>
+  <elements xsi:type="evilsystem:SimpleType" name="String"/>
+  <elements xsi:type="evilsystem:SimpleType" name="Double"/>
+  <elements xsi:type="evilsystem:Entity" name="Account">
+    <attributes name="accountId" type="//@elements.3"/>
+    <attributes name="cash" type="//@elements.1"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="Application">
+    <attributes name="applicationName" type="//@elements.3"/>
+    <attributes name="developerId" type="//@elements.2"/>
+    <attributes name="version" type="//@elements.1"/>
+    <attributes name="description" type="//@elements.7"/>
+    <attributes name="cost" type="//@elements.1"/>
+    <attributes name="programDataID" type="//@elements.2"/>
+    <attributes name="validated" type="//@elements.0"/>
+    <attributes name="checked" type="//@elements.0"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="ApplicationDescription">
+    <attributes name="descriptionText" type="//@elements.3"/>
+    <attributes name="applicationType" type="//@elements.3" collection="true"/>
+    <attributes name="ageRestriction" type="//@elements.1"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="User" queries="//@elements.19/@services.0/@functions.2/@queries.0">
+    <attributes name="userName" type="//@elements.3"/>
+    <attributes name="passwordHash" type="//@elements.1"/>
+    <attributes name="birth" type="//@elements.2"/>
+    <attributes name="account" type="//@elements.5"/>
+    <attributes name="purchasedApplications" type="//@elements.12" collection="true"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="Developer">
+    <attributes name="uploadedApplications" type="//@elements.6" collection="true"/>
+    <attributes name="account" type="//@elements.5"/>
+    <attributes name="Name" type="//@elements.3"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="Administrator"/>
+  <elements xsi:type="evilsystem:Entity" name="ProgramData">
+    <attributes name="programFile" type="//@elements.3"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="Purchase">
+    <attributes name="atPrice" type="//@elements.1"/>
+    <attributes name="date" type="//@elements.2"/>
+    <attributes name="application" type="//@elements.6"/>
+  </elements>
+  <elements xsi:type="evilsystem:Entity" name="CustomerSimilarityScore">
+    <attributes name="user1ID" type="//@elements.2"/>
+    <attributes name="user2ID" type="//@elements.2"/>
+    <attributes name="score" type="//@elements.4"/>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="ViewApplications">
+    <services path="View">
+      <functions name="viewUncheckedApplication" type="//@elements.6" collection="true"/>
+      <functions name="viewValidatedApplication" type="//@elements.6" collection="true"/>
+      <functions name="viewBuyedApplication" type="//@elements.6" collection="true">
+        <parameters name="userID" type="//@elements.2"/>
+      </functions>
+      <functions name="viewApplicationDetails" type="//@elements.7">
+        <parameters name="applicationID" type="//@elements.2"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="ApplicationBuy">
+    <services path="BuyApplication">
+      <functions name="buy" type="//@elements.0" methodType="PUT">
+        <parameters name="userID" type="//@elements.2"/>
+        <parameters name="applicationID" type="//@elements.2"/>
+      </functions>
+      <functions name="download" type="//@elements.3">
+        <parameters name="applicationID" type="//@elements.2"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="UploadApplication">
+    <services path="UploadApplication">
+      <functions name="upload" type="//@elements.0" methodType="PUT">
+        <parameters name="appName" type="//@elements.3"/>
+        <parameters name="developerId" type="//@elements.2"/>
+        <parameters name="version" type="//@elements.1"/>
+        <parameters name="desc" type="//@elements.3"/>
+        <parameters name="cost" type="//@elements.1"/>
+        <parameters name="progfile" type="//@elements.3"/>
+        <parameters name="appType" type="//@elements.3" collection="true"/>
+        <parameters name="ageRestriction" type="//@elements.1"/>
+      </functions>
+      <functions name="setValidated" type="//@elements.0" methodType="PUT">
+        <parameters name="ApplicationID" type="//@elements.2"/>
+        <parameters name="isValid" type="//@elements.0"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="ApplicationValidation" platform="dotNet">
+    <services path="Validation">
+      <functions name="validateApplication" type="//@elements.0" methodType="POST">
+        <parameters name="programData" type="//@elements.3"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="AccountManagement">
+    <services path="AccountManagement">
+      <functions name="transferMoney" type="//@elements.0" methodType="POST">
+        <parameters name="accountId" type="//@elements.3"/>
+        <parameters name="ammount" type="//@elements.1"/>
+      </functions>
+      <functions name="withdrawMoney" type="//@elements.0" methodType="POST">
+        <parameters name="accountId" type="//@elements.3"/>
+        <parameters name="ammount" type="//@elements.1"/>
+      </functions>
+      <functions name="getAccountOfUser" type="//@elements.3">
+        <parameters name="userID" type="//@elements.2"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="UserManagement">
+    <services path="Registration">
+      <functions name="registerNewUser" type="//@elements.0" methodType="PUT">
+        <parameters name="userName" type="//@elements.3"/>
+        <parameters name="accountId" type="//@elements.3"/>
+        <parameters name="passwordHash" type="//@elements.1"/>
+        <parameters name="birth" type="//@elements.3"/>
+      </functions>
+      <functions name="deleteProfile" type="//@elements.0" methodType="POST">
+        <parameters name="userID" type="//@elements.2"/>
+      </functions>
+      <functions name="login" type="//@elements.2">
+        <parameters name="userName" type="//@elements.3"/>
+        <queries name="userWithName" referred="//@elements.8" query="SELECT u From User u Where u.userName = NÉV"/>
+      </functions>
+      <functions name="IsMatchingPasswordHash" type="//@elements.0">
+        <parameters name="userID" type="//@elements.2"/>
+        <parameters name="passwordHash" type="//@elements.1"/>
+      </functions>
+      <functions name="userage" type="//@elements.1">
+        <parameters name="userID" type="//@elements.2"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="PasswordManagement" platform="dotNet">
+    <services path="PasswordManagement">
+      <functions name="generatePasswordHash" type="//@elements.1">
+        <parameters name="password" type="//@elements.3"/>
+      </functions>
+      <functions name="checkPassword" type="//@elements.0">
+        <parameters name="password" type="//@elements.3"/>
+        <parameters name="passwordHash" type="//@elements.1"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="DataBaseFiller">
+    <services path="FillData">
+      <functions name="fill" type="//@elements.3" methodType="POST">
+        <parameters name="uri" type="//@elements.3"/>
+      </functions>
+    </services>
+  </elements>
+  <elements xsi:type="evilsystem:Component" name="ApplicationGenius">
+    <services path="ApplicationGenius">
+      <functions name="getUsers" type="//@elements.8" collection="true"/>
+      <functions name="getSelectedUser" type="//@elements.8">
+        <parameters name="userID" type="//@elements.2"/>
+      </functions>
+      <functions name="classifyType" type="//@elements.3" methodType="POST">
+        <parameters name="age" type="//@elements.1"/>
+      </functions>
+      <functions name="GetSimilarities" type="//@elements.13" collection="true"/>
+    </services>
+  </elements>
+</evilsystem:System>

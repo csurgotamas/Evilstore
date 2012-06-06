@@ -1,0 +1,17 @@
+D:\Appstore\Appstore\bin\Appstore.dll
+D:\Appstore\Appstore\bin\Appstore.pdb
+D:\Appstore\Appstore\obj\Debug\ResolveAssemblyReference.cache
+D:\Appstore\Appstore\obj\Debug\Appstore.dll
+D:\Appstore\Appstore\obj\Debug\Appstore.pdb
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Appstore.dll
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Appstore.pdb
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Newtonsoft.Json.pdb
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Newtonsoft.Json.xml
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\ResolveAssemblyReference.cache
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\Appstore.dll
+D:\Data\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\Appstore.pdb
+D:\bme\msc\1\MDSD\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Appstore.dll
+D:\bme\msc\1\MDSD\runtime-EclipseApplication\dotNET\Appstore\Appstore\bin\Appstore.pdb
+D:\bme\msc\1\MDSD\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\ResolveAssemblyReference.cache
+D:\bme\msc\1\MDSD\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\Appstore.dll
+D:\bme\msc\1\MDSD\runtime-EclipseApplication\dotNET\Appstore\Appstore\obj\Debug\Appstore.pdb

@@ -1,0 +1,21 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "UploadApp",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "AppName": new StringDataType(),
+      "DeveloperId": new StringDataType(),
+      "Version": new StringDataType(),
+      "Desc": new StringDataType(),
+      "Cost": new StringDataType(),
+      "ProgFile": new StringDataType(),
+      "AppType": new StringDataType(),
+      "Method" : new StringDataType(),
+      "AgeRestriction" : new StringDataType()
+    ],
+    "displayName" : "UploadApp",
+    "icon" : "icons/webservice.gif"
+  ]
+]

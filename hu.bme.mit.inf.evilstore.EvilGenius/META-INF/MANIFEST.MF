@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EvilGenius
+Bundle-SymbolicName: EvilGenius
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.sample
+Require-Bundle: hu.bme.mit.evilsystem.entities;bundle-version="1.0.0"

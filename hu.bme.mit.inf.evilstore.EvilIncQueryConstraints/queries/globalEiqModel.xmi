@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="ASCII"?>
+<eMFPatternLanguage:PatternModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eMFPatternLanguage="http://www.eclipse.org/viatra2/patternlanguage/EMFPatternLanguage" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:patternLanguage="http://www.eclipse.org/viatra2/patternlanguage/core/PatternLanguage">
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.ACyclic">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi entit&#xe1;s k&#xf6;rt alkot: $E.name$"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="E"/>
+      </parameters>
+    </annotations>
+    <parameters name="E">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Entity"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" patternRef="//@patterns.1">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="E"/>
+        </parameters>
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="E"/>
+        </parameters>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.ReachAble">
+    <parameters name="A">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Entity"/>
+      </type>
+    </parameters>
+    <parameters name="B">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Entity"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Entity"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EReference" href="http://evilsystem/1.0#//Entity/superClass"/>
+            </type>
+          </tail>
+          <src var="A"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="B"/>
+          </dst>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Entity"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EReference" href="http://evilsystem/1.0#//Entity/superClass"/>
+            </type>
+          </tail>
+          <src var="A"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="K"/>
+          </dst>
+        </head>
+      </constraints>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" patternRef="//@patterns.1">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="K"/>
+        </parameters>
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="B"/>
+        </parameters>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.SameName">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi n&#xe9;ven t&#xf6;bb objektum is szerepel: $NO1.name$"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="NO1"/>
+      </parameters>
+    </annotations>
+    <parameters name="NO1">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+      </type>
+    </parameters>
+    <parameters name="NO2">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO1"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="Name"/>
+          </dst>
+        </head>
+      </constraints>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO2"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="Name"/>
+          </dst>
+        </head>
+      </constraints>
+      <constraints xsi:type="patternLanguage:CompareConstraint" feature="!=">
+        <leftOperand xsi:type="patternLanguage:VariableValue">
+          <value var="NO1"/>
+        </leftOperand>
+        <rightOperand xsi:type="patternLanguage:VariableValue">
+          <value var="NO2"/>
+        </rightOperand>
+      </constraints>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" negative="true" patternRef="//@patterns.3">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="NO1"/>
+        </parameters>
+      </constraints>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" negative="true" patternRef="//@patterns.3">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="NO2"/>
+        </parameters>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.AttrsParams">
+    <parameters name="AP"/>
+    <bodies>
+      <constraints xsi:type="eMFPatternLanguage:EClassifierConstraint">
+        <type xsi:type="eMFPatternLanguage:ClassType">
+          <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Parameter"/>
+        </type>
+        <var var="AP"/>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="eMFPatternLanguage:EClassifierConstraint">
+        <type xsi:type="eMFPatternLanguage:ClassType">
+          <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Attribute"/>
+        </type>
+        <var var="AP"/>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.TypesNotUsed">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi T&#xed;pus nincs haszn&#xe1;lva: $T.name$"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="warning"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="T"/>
+      </parameters>
+    </annotations>
+    <parameters name="T">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Type"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" negative="true" patternRef="//@patterns.5">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="T"/>
+        </parameters>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.TypedRef">
+    <parameters name="T">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Type"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//TypeReference"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EReference" href="http://evilsystem/1.0#//TypeReference/type"/>
+            </type>
+          </tail>
+          <src var="TR"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="T"/>
+          </dst>
+        </head>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.Max1Service">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi komponensnek egyn&#xe9;l t&#xf6;bb szolg&#xe1;ltat&#xe1;sa van: $C.name$"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="C"/>
+      </parameters>
+    </annotations>
+    <parameters name="C">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Component"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" patternRef="//@patterns.7">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="C"/>
+        </parameters>
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="S1"/>
+        </parameters>
+      </constraints>
+      <constraints xsi:type="patternLanguage:PatternCompositionConstraint" patternRef="//@patterns.7">
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="C"/>
+        </parameters>
+        <parameters xsi:type="patternLanguage:VariableValue">
+          <value var="S2"/>
+        </parameters>
+      </constraints>
+      <constraints xsi:type="patternLanguage:CompareConstraint" feature="!=">
+        <leftOperand xsi:type="patternLanguage:VariableValue">
+          <value var="S1"/>
+        </leftOperand>
+        <rightOperand xsi:type="patternLanguage:VariableValue">
+          <value var="S2"/>
+        </rightOperand>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.ComponentService">
+    <parameters name="C">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Component"/>
+      </type>
+    </parameters>
+    <parameters name="S">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Service"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Component"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EReference" href="http://evilsystem/1.0#//Component/services"/>
+            </type>
+          </tail>
+          <src var="C"/>
+          <dst xsi:type="patternLanguage:VariableValue">
+            <value var="S"/>
+          </dst>
+        </head>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.EmptyNamedObj">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi objektumnak nincs neve:"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="NO"/>
+      </parameters>
+    </annotations>
+    <parameters name="NO">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value=""/>
+        </head>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.EmptyPathService">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi szolg&#xe1;ltat&#xe1;snaknak nincs neve:"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="S"/>
+      </parameters>
+    </annotations>
+    <parameters name="S">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Service"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//Service"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//Service/path"/>
+            </type>
+          </tail>
+          <src var="S"/>
+          <dst xsi:type="patternLanguage:StringValue" value=""/>
+        </head>
+      </constraints>
+    </bodies>
+  </patterns>
+  <patterns name="hu.bme.mit.inf.evilstore.evilconstraints.IsValidName">
+    <annotations name="Constraint">
+      <parameters name="message">
+        <value xsi:type="patternLanguage:StringValue" value="Az al&#xe1;bbi nev&#x171; objektum nem valid: $NO.name$"/>
+      </parameters>
+      <parameters name="severity">
+        <value xsi:type="patternLanguage:StringValue" value="error"/>
+      </parameters>
+      <parameters name="location">
+        <value xsi:type="patternLanguage:StringValue" value="NO"/>
+      </parameters>
+    </annotations>
+    <parameters name="NO">
+      <type xsi:type="eMFPatternLanguage:ClassType">
+        <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+      </type>
+    </parameters>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="abstract"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="continue"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="for"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="new"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="switch"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="assert"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="default"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="goto"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="package"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="synchronized"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="boolean"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="do"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="if"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="private"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="this"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="break"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="double"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="implements"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="protected"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="throw"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="byte"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="else"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="import"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="public"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="throws"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="case"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="enum"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="instanceof"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="return"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="transient"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="catch"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="extends"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="int"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="short"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="try"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="char"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="final"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="interface"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="static"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="void"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="class"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="finally"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="long"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="strictfp"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="volatile"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="const"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="float"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="native"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="super"/>
+        </head>
+      </constraints>
+    </bodies>
+    <bodies>
+      <constraints xsi:type="patternLanguage:PathExpressionConstraint">
+        <head>
+          <type xsi:type="eMFPatternLanguage:ClassType">
+            <classname xsi:type="ecore:EClass" href="http://evilsystem/1.0#//NamedObject"/>
+          </type>
+          <tail>
+            <type xsi:type="eMFPatternLanguage:ReferenceType">
+              <refname xsi:type="ecore:EAttribute" href="http://evilsystem/1.0#//NamedObject/name"/>
+            </type>
+          </tail>
+          <src var="NO"/>
+          <dst xsi:type="patternLanguage:StringValue" value="while"/>
+        </head>
+      </constraints>
+    </bodies>
+  </patterns>
+</eMFPatternLanguage:PatternModel>

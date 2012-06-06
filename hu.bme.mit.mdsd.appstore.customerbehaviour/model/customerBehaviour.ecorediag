@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_iUK3AZFEEeGYYsMXL-xVGA" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_imR6sJFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_inSAQJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_inXf0JFEEeGYYsMXL-xVGA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_inXf0ZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_inXf0pFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_inXf05FEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_inYt8JFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_inYt8ZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_inYt8pFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_inYt85FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_imR6sZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//CustomerBehaviour"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_imR6spFEEeGYYsMXL-xVGA" x="360" y="491"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ipEI8JFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ipFXEJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ipFXEZFEEeGYYsMXL-xVGA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_itzfAJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Developer/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_itzfAZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ipFXEpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ipFXE5FEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ipFXFJFEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ipF-IJFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ipF-IZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ipF-IpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ipF-I5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ipEI8ZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//Developer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ipEI8pFEEeGYYsMXL-xVGA" x="121" y="380"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_it0GEJFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_it1UMJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_it1UMZFEEeGYYsMXL-xVGA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_it2iUJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//App/title"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it2iUZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_it3JYJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//App/ageRestriction"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it3JYZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_it4XgJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//App/category"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it4XgZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_it4-kJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//App/currentPrice"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it4-kZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_it1UMpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_it1UM5FEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_it1UNJFEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_it17QJFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_it17QZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_it17QpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_it17Q5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_it0tIJFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//App"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_it0tIZFEEeGYYsMXL-xVGA" x="93" y="218"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_it6zwJFEEeGYYsMXL-xVGA" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_it8o8JFEEeGYYsMXL-xVGA" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_it93EJFEEeGYYsMXL-xVGA" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_it_FMJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/PRODUCTIVITY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it_FMZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_it_sQJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/NEWS_AND_WEATHER"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_it_sQZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuATUJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/TOOLS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuATUZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuA6YJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/MULTIMEDIA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuA6YZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuBhcJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/SOCIAL"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuBhcZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuCIgJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/GAME"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuCIgZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuCvkJFEEeGYYsMXL-xVGA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="customerBehaviour.ecore#//AppCategory/OTHER"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuCvkZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_it93EZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_it93EpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_it93E5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_it6zwZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="customerBehaviour.ecore#//AppCategory"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_it6zwpFEEeGYYsMXL-xVGA"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_iuDWoJFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_iuEkwJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_iuEkwZFEEeGYYsMXL-xVGA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_iuFy4JFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Customer/firstName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuFy4ZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuGZ8JFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Customer/lastName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuGZ8ZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuHBAJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Customer/dateOfBirth"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuHBAZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuEkwpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuEkw5FEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuEkxJFEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_iuFL0JFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuFL0ZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuFL0pFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuFL05FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_iuDWoZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//Customer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuDWopFEEeGYYsMXL-xVGA" x="324" y="218"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_iuHoEJFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_iuIPIJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_iuI2MJFEEeGYYsMXL-xVGA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_iuJdQJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Purchase/date"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuJdQZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iuKEUJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//Purchase/atPrice"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuKEUZFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuI2MZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuI2MpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuI2M5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_iuI2NJFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuI2NZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuI2NpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuI2N5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_iuHoEZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//Purchase"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuHoEpFEEeGYYsMXL-xVGA" x="222"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_iuKrYJFEEeGYYsMXL-xVGA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_iuLScJFEEeGYYsMXL-xVGA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_iuL5gJFEEeGYYsMXL-xVGA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_iuMglJFEEeGYYsMXL-xVGA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="customerBehaviour.ecore#//CustomerSimilarityScore/score"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iuNHoJFEEeGYYsMXL-xVGA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuL5gZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuL5gpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuL5g5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_iuMgkJFEEeGYYsMXL-xVGA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iuMgkZFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iuMgkpFEEeGYYsMXL-xVGA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iuMgk5FEEeGYYsMXL-xVGA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_iuKrYZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="customerBehaviour.ecore#//CustomerSimilarityScore"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iuKrYpFEEeGYYsMXL-xVGA" x="296" y="380"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_iUK3ApFEEeGYYsMXL-xVGA"/>
+  <element xmi:type="ecore:EPackage" href="customerBehaviour.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_iunXUJFEEeGYYsMXL-xVGA" type="3002" source="_imR6sJFEEeGYYsMXL-xVGA" target="_iuDWoJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_iupzkJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_iupzkZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_iu_x0JFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_iu_x0ZFEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_iun-YJFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_iun-YZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//CustomerBehaviour/customers"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iun-YpFEEeGYYsMXL-xVGA" points="[0, 0, 30, 188]$[117, -61, 147, 127]$[117, -111, 147, 77]$[-30, -188, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkyKUJFEEeGYYsMXL-xVGA" id="(0.746268656716418,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkyxYJFEEeGYYsMXL-xVGA" id="(0.7464788732394366,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivBnAJFEEeGYYsMXL-xVGA" type="3002" source="_imR6sJFEEeGYYsMXL-xVGA" target="_ipEI8JFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivCOEJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivCOEZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivCOEpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivCOE5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivBnAZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivBnApFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//CustomerBehaviour/developers"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivBnA5FEEeGYYsMXL-xVGA" points="[0, 0, 215, 60]$[-215, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkt44JFEEeGYYsMXL-xVGA" id="(0.2462686567164179,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkuf8JFEEeGYYsMXL-xVGA" id="(0.4956521739130435,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivC1IJFEEeGYYsMXL-xVGA" type="3002" source="_imR6sJFEEeGYYsMXL-xVGA" target="_iuKrYJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivDcMJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivDcMZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivDcMpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivDcM5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivC1IZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivC1IpFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//CustomerBehaviour/similarityScores"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivC1I5FEEeGYYsMXL-xVGA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jksqwJFEEeGYYsMXL-xVGA" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jktR0JFEEeGYYsMXL-xVGA" id="(0.808641975308642,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivEDQJFEEeGYYsMXL-xVGA" type="3002" source="_ipEI8JFEEeGYYsMXL-xVGA" target="_it0GEJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivEqUJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivEqUZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivEqUpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivEqU5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivEDQZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivEDQpFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//Developer/authoredApps"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivEDQ5FEEeGYYsMXL-xVGA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkjg0JFEEeGYYsMXL-xVGA" id="(0.4956521739130435,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkku8JFEEeGYYsMXL-xVGA" id="(0.49707602339181284,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivFRYJFEEeGYYsMXL-xVGA" type="3002" source="_it0GEJFEEeGYYsMXL-xVGA" target="_ipEI8JFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivF4cJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivF4cZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivF4cpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivF4c5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivFRYZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivFRYpFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//App/developer"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivFRY5FEEeGYYsMXL-xVGA" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkrcoJFEEeGYYsMXL-xVGA" id="(0.49707602339181284,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jksDsJFEEeGYYsMXL-xVGA" id="(0.4956521739130435,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivGfgJFEEeGYYsMXL-xVGA" type="3002" source="_it0GEJFEEeGYYsMXL-xVGA" target="_iuHoEJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivHGkJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivHGkZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivHGkpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivHGk5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivGfgZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivGfgpFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//App/purchases"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivGfg5FEEeGYYsMXL-xVGA" points="[0, 0, 0, 150]$[0, -150, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkqOgJFEEeGYYsMXL-xVGA" id="(0.9064327485380117,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkqOgZFEEeGYYsMXL-xVGA" id="(0.2,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivHtoJFEEeGYYsMXL-xVGA" type="3002" source="_iuDWoJFEEeGYYsMXL-xVGA" target="_iuHoEJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivIUsJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivIUsZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivIUspFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivIUs5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivHtoZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivHtopFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//Customer/purchases"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivHto5FEEeGYYsMXL-xVGA" points="[0, 0, 71, 150]$[-71, -150, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkoZUJFEEeGYYsMXL-xVGA" id="(0.33098591549295775,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkpAYJFEEeGYYsMXL-xVGA" id="(0.6,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivI7wJFEEeGYYsMXL-xVGA" type="3002" source="_iuHoEJFEEeGYYsMXL-xVGA" target="_iuDWoJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivJi0JFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivJi0ZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivJi0pFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivJi05FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivI7wZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivI7wpFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//Purchase/customer"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivI7w5FEEeGYYsMXL-xVGA" points="[0, 0, -92, -150]$[92, 150, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkw8MJFEEeGYYsMXL-xVGA" id="(0.8,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkxjQJFEEeGYYsMXL-xVGA" id="(0.6619718309859155,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivKJ4JFEEeGYYsMXL-xVGA" type="3002" source="_iuHoEJFEEeGYYsMXL-xVGA" target="_it0GEJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivKw8JFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivKw8ZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivKw8pFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivKw85FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivKJ4ZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivKJ4pFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//Purchase/app"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivKJ45FEEeGYYsMXL-xVGA" points="[0, 0, 18, -150]$[-18, 150, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkvuEJFEEeGYYsMXL-xVGA" id="(0.4,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkwVIJFEEeGYYsMXL-xVGA" id="(0.9532163742690059,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivLYAJFEEeGYYsMXL-xVGA" type="3002" source="_iuKrYJFEEeGYYsMXL-xVGA" target="_iuDWoJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivL_EJFEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivL_EZFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivL_EpFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivL_E5FEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivLYAZFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivLYApFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//CustomerSimilarityScore/customer1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivLYA5FEEeGYYsMXL-xVGA" points="[0, 0, -1, 79]$[-131, -37, -132, 42]$[1, -79, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jknLMJFEEeGYYsMXL-xVGA" id="(0.6111111111111112,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jknyQJFEEeGYYsMXL-xVGA" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ivL_FJFEEeGYYsMXL-xVGA" type="3002" source="_iuKrYJFEEeGYYsMXL-xVGA" target="_iuDWoJFEEeGYYsMXL-xVGA">
+    <children xmi:type="notation:Node" xmi:id="_ivMmI5FEEeGYYsMXL-xVGA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivMmJJFEEeGYYsMXL-xVGA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivNNMJFEEeGYYsMXL-xVGA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ivNNMZFEEeGYYsMXL-xVGA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ivMmIJFEEeGYYsMXL-xVGA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ivMmIZFEEeGYYsMXL-xVGA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="customerBehaviour.ecore#//CustomerSimilarityScore/customer2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ivMmIpFEEeGYYsMXL-xVGA" points="[0, 0, -1, 79]$[37, -30, 36, 49]$[1, -79, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkl9EJFEEeGYYsMXL-xVGA" id="(0.6111111111111112,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkmkIJFEEeGYYsMXL-xVGA" id="(0.5,1.0)"/>
+  </edges>
+</notation:Diagram>

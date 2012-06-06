@@ -1,0 +1,15 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "TransferMoney",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "AppId": new StringDataType(),
+      "IsValid": new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "TransferMoney",
+    "icon" : "icons/webservice.gif"
+  ]
+]

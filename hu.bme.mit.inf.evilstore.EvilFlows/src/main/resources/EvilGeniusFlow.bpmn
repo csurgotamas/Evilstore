@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_osgiviewAppsAddressItem" structureRef="String" />
+  <itemDefinition id="_appListItem" structureRef="String" />
+  <itemDefinition id="_nameItem" structureRef="String" />
+  <itemDefinition id="_passwordItem" structureRef="String" />
+  <itemDefinition id="_passwordHashURLItem" structureRef="String" />
+  <itemDefinition id="_userIDItem" structureRef="String" />
+  <itemDefinition id="_loginURLItem" structureRef="String" />
+  <itemDefinition id="_passwordHashItem" structureRef="String" />
+  <itemDefinition id="_passwordHashMethodItem" structureRef="Object" />
+  <itemDefinition id="_passwordMatchURLItem" structureRef="String" />
+  <itemDefinition id="_passwordMatchRetItem" structureRef="String" />
+  <itemDefinition id="_getusersURLItem" structureRef="String" />
+  <itemDefinition id="_userListItem" structureRef="String" />
+  <itemDefinition id="_getsimURLItem" structureRef="String" />
+  <itemDefinition id="_simListItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="hu.bme.mit.wf.genius" name="Sample Process" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="osgiviewAppsAddress" itemSubjectRef="_osgiviewAppsAddressItem"/>
+    <property id="appList" itemSubjectRef="_appListItem"/>
+    <property id="name" itemSubjectRef="_nameItem"/>
+    <property id="password" itemSubjectRef="_passwordItem"/>
+    <property id="passwordHashURL" itemSubjectRef="_passwordHashURLItem"/>
+    <property id="userID" itemSubjectRef="_userIDItem"/>
+    <property id="loginURL" itemSubjectRef="_loginURLItem"/>
+    <property id="passwordHash" itemSubjectRef="_passwordHashItem"/>
+    <property id="passwordHashMethod" itemSubjectRef="_passwordHashMethodItem"/>
+    <property id="passwordMatchURL" itemSubjectRef="_passwordMatchURLItem"/>
+    <property id="passwordMatchRet" itemSubjectRef="_passwordMatchRetItem"/>
+    <property id="getusersURL" itemSubjectRef="_getusersURLItem"/>
+    <property id="userList" itemSubjectRef="_userListItem"/>
+    <property id="getsimURL" itemSubjectRef="_getsimURLItem"/>
+    <property id="simList" itemSubjectRef="_simListItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_3" name="ViewApps" tns:taskName="ViewApps" >
+      <ioSpecification>
+        <dataInput id="_3_URLInput" name="URL" />
+        <dataInput id="_3_MethodInput" name="Method" />
+        <dataOutput id="_3_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_3_URLInput</dataInputRefs>
+          <dataInputRefs>_3_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>osgiviewAppsAddress</sourceRef>
+        <targetRef>_3_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_3_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_retOutput</sourceRef>
+        <targetRef>appList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_4" name="FlowConfig" >
+      <script>kcontext.setVariable("osgiviewAppsAddress", "http://localhost:8081/View/viewValidatedApplication");
+kcontext.setVariable("passwordHashURL", "http://localhost:8082/PasswordManagement/Services/PasswordManagement.svc/generatePasswordHash");
+kcontext.setVariable("passwordHashMethod","GET");
+kcontext.setVariable("loginURL","http://localhost:8081/Registration/login");
+kcontext.setVariable("passwordMatchURL","http://localhost:8081/Registration/IsMatchingPasswordHash");
+kcontext.setVariable("getusersURL","http://localhost:8081/ApplicationGenius/getUsers");
+kcontext.setVariable("getsimURL","http://localhost:8081/ApplicationGenius/GetSimilarities");
+</script>
+    </scriptTask>
+    <task id="_6" name="GetLoginData" tns:taskName="GetLoginData" >
+      <ioSpecification>
+        <dataOutput id="_6_nameOutput" name="name" />
+        <dataOutput id="_6_passwordOutput" name="password" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_nameOutput</dataOutputRefs>
+          <dataOutputRefs>_6_passwordOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_6_nameOutput</sourceRef>
+        <targetRef>name</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_passwordOutput</sourceRef>
+        <targetRef>password</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_8" name="UserLogin" tns:taskName="UserLogin" >
+      <ioSpecification>
+        <dataInput id="_8_URLInput" name="URL" />
+        <dataInput id="_8_UsenameInput" name="Usename" />
+        <dataInput id="_8_MethodInput" name="Method" />
+        <dataOutput id="_8_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_8_URLInput</dataInputRefs>
+          <dataInputRefs>_8_UsenameInput</dataInputRefs>
+          <dataInputRefs>_8_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_8_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>loginURL</sourceRef>
+        <targetRef>_8_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_8_UsenameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_8_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_8_retOutput</sourceRef>
+        <targetRef>userID</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_14" name="PasswordHash" tns:taskName="PasswordHash" >
+      <ioSpecification>
+        <dataInput id="_14_passwordCheckerURLInput" name="passwordCheckerURL" />
+        <dataInput id="_14_passwordCheckerMethodInput" name="passwordCheckerMethod" />
+        <dataInput id="_14_passwordInput" name="password" />
+        <dataInput id="_14_MethodInput" name="Method" />
+        <dataOutput id="_14_passwordHashOutput" name="passwordHash" />
+        <inputSet>
+          <dataInputRefs>_14_passwordCheckerURLInput</dataInputRefs>
+          <dataInputRefs>_14_passwordCheckerMethodInput</dataInputRefs>
+          <dataInputRefs>_14_passwordInput</dataInputRefs>
+          <dataInputRefs>_14_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_14_passwordHashOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>passwordHashURL</sourceRef>
+        <targetRef>_14_passwordCheckerURLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>passwordHashMethod</sourceRef>
+        <targetRef>_14_passwordCheckerMethodInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>password</sourceRef>
+        <targetRef>_14_passwordInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_14_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_14_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_14_passwordHashOutput</sourceRef>
+        <targetRef>passwordHash</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_15" name="IsMatchingPasswordHash" tns:taskName="IsMatchingPasswordHash" >
+      <ioSpecification>
+        <dataInput id="_15_PasswordHashInput" name="PasswordHash" />
+        <dataInput id="_15_UserIdInput" name="UserId" />
+        <dataInput id="_15_URLInput" name="URL" />
+        <dataInput id="_15_MethodInput" name="Method" />
+        <dataOutput id="_15_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_15_PasswordHashInput</dataInputRefs>
+          <dataInputRefs>_15_UserIdInput</dataInputRefs>
+          <dataInputRefs>_15_URLInput</dataInputRefs>
+          <dataInputRefs>_15_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_15_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>passwordHash</sourceRef>
+        <targetRef>_15_PasswordHashInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>userID</sourceRef>
+        <targetRef>_15_UserIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>passwordMatchURL</sourceRef>
+        <targetRef>_15_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_15_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_15_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_15_retOutput</sourceRef>
+        <targetRef>passwordMatchRet</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_17" name="LoginFail" >
+      <script>System.out.println("A belépés sikertelen, hibás felhasználónév vagy jelszó!");</script>
+    </scriptTask>
+    <exclusiveGateway id="_16" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_55" name="GetUsers" tns:taskName="GetUsers" >
+      <ioSpecification>
+        <dataInput id="_55_URLInput" name="URL" />
+        <dataInput id="_55_MethodInput" name="Method" />
+        <dataOutput id="_55_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_55_URLInput</dataInputRefs>
+          <dataInputRefs>_55_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_55_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>getusersURL</sourceRef>
+        <targetRef>_55_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_55_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_55_retOutput</sourceRef>
+        <targetRef>userList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_54" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <exclusiveGateway id="_53" name="Gateway" gatewayDirection="Converging" />
+    <task id="_57" name="GetSimilarity" tns:taskName="GetSimilarity" >
+      <ioSpecification>
+        <dataInput id="_57_URLInput" name="URL" />
+        <dataInput id="_57_MethodInput" name="Method" />
+        <dataOutput id="_57_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_57_URLInput</dataInputRefs>
+          <dataInputRefs>_57_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_57_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>getsimURL</sourceRef>
+        <targetRef>_57_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_57_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_57_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_57_retOutput</sourceRef>
+        <targetRef>simList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_56" name="EvilGenius számítása." >
+      <script>//System.out.println(kcontext.getVariable("simList"));
+System.out.println(NormalFunctions.ForGenius.GeniusFunc(kcontext.getVariable("userList"),kcontext.getVariable("appList"),kcontext.getVariable("userID"),kcontext.getVariable("simList")));</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_16-_3" sourceRef="_16" targetRef="_3" name="login_successful" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return kcontext.getVariable("passwordMatchRet");</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_4" sourceRef="_1" targetRef="_4" />
+    <sequenceFlow id="_53-_6" sourceRef="_53" targetRef="_6" />
+    <sequenceFlow id="_6-_8" sourceRef="_6" targetRef="_8" />
+    <sequenceFlow id="_8-_14" sourceRef="_8" targetRef="_14" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" />
+    <sequenceFlow id="_16-_17" sourceRef="_16" targetRef="_17" name="login_fail" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return !kcontext.getVariable("passwordMatchRet");</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" />
+    <sequenceFlow id="_3-_55" sourceRef="_3" targetRef="_55" />
+    <sequenceFlow id="_56-_54" sourceRef="_56" targetRef="_54" />
+    <sequenceFlow id="_4-_53" sourceRef="_4" targetRef="_53" />
+    <sequenceFlow id="_17-_53" sourceRef="_17" targetRef="_53" />
+    <sequenceFlow id="_55-_57" sourceRef="_55" targetRef="_57" />
+    <sequenceFlow id="_57-_56" sourceRef="_57" targetRef="_56" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="hu.bme.mit.wf.genius" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="15" y="29" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="552" y="56" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="95" y="30" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="181" y="88" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="180" y="154" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="309" y="157" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="440" y="158" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="548" y="226" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="562" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_55" >
+        <dc:Bounds x="695" y="58" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_54" >
+        <dc:Bounds x="718" y="307" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" >
+        <dc:Bounds x="111" y="108" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_57" >
+        <dc:Bounds x="700" y="146" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_56" >
+        <dc:Bounds x="722" y="230" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_16-_3" >
+        <di:waypoint x="586" y="180" />
+        <di:waypoint x="602" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_4" >
+        <di:waypoint x="39" y="53" />
+        <di:waypoint x="135" y="54" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_53-_6" >
+        <di:waypoint x="135" y="132" />
+        <di:waypoint x="231" y="112" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_8" >
+        <di:waypoint x="231" y="112" />
+        <di:waypoint x="230" y="178" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_14" >
+        <di:waypoint x="230" y="178" />
+        <di:waypoint x="359" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="359" y="181" />
+        <di:waypoint x="490" y="182" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_17" >
+        <di:waypoint x="586" y="180" />
+        <di:waypoint x="588" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="490" y="182" />
+        <di:waypoint x="586" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_55" >
+        <di:waypoint x="602" y="80" />
+        <di:waypoint x="745" y="82" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_56-_54" >
+        <di:waypoint x="762" y="254" />
+        <di:waypoint x="742" y="331" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_53" >
+        <di:waypoint x="135" y="54" />
+        <di:waypoint x="135" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_53" >
+        <di:waypoint x="588" y="250" />
+        <di:waypoint x="138" y="246" />
+        <di:waypoint x="135" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_55-_57" >
+        <di:waypoint x="745" y="82" />
+        <di:waypoint x="750" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_57-_56" >
+        <di:waypoint x="750" y="170" />
+        <di:waypoint x="762" y="254" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

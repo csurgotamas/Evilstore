@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_dotnetvalidateAddressItem" structureRef="String" />
+  <itemDefinition id="_applistItem" structureRef="String" />
+  <itemDefinition id="_osgiviewAddressItem" structureRef="String" />
+  <itemDefinition id="_osgidownloadAddressItem" structureRef="String" />
+  <itemDefinition id="_appidItem" structureRef="String" />
+  <itemDefinition id="_programfileItem" structureRef="String" />
+  <itemDefinition id="_validatedItem" structureRef="Boolean" />
+  <itemDefinition id="_osgisetvalidatedAddressItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="hu.bme.mit.wf.validation" name="Sample Process" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="dotnetvalidateAddress" itemSubjectRef="_dotnetvalidateAddressItem"/>
+    <property id="applist" itemSubjectRef="_applistItem"/>
+    <property id="osgiviewAddress" itemSubjectRef="_osgiviewAddressItem"/>
+    <property id="osgidownloadAddress" itemSubjectRef="_osgidownloadAddressItem"/>
+    <property id="appid" itemSubjectRef="_appidItem"/>
+    <property id="programfile" itemSubjectRef="_programfileItem"/>
+    <property id="validated" itemSubjectRef="_validatedItem"/>
+    <property id="osgisetvalidatedAddress" itemSubjectRef="_osgisetvalidatedAddressItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <scriptTask id="_3" name="FlowConfig" >
+      <script>kcontext.setVariable("osgiviewAddress", "http://localhost:8081/View/viewUncheckedApplication");
+kcontext.setVariable("osgidownloadAddress", "http://localhost:8081/BuyApplication/download");
+kcontext.setVariable("dotnetvalidateAddress", "http://localhost:8082/ApplicationValidation/Services/Validation.svc/validateApplication");
+kcontext.setVariable("osgisetvalidatedAddress","http://localhost:8081/UploadApplication/setValidated");</script>
+    </scriptTask>
+    <scriptTask id="_5" name="pickapp" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("appid", NormalFunctions.ForValidation.pickApp(kcontext.getVariable("applist")));
+System.out.println("Picked appid: "+kcontext.getVariable("appid"));
+if(kcontext.getVariable("appid")==null){
+	System.out.println("Nincs validálandó applikáció!");
+}</script>
+    </scriptTask>
+    <scriptTask id="_9" name="admin test" >
+      <script>System.out.println("Sikerült az automatikus validáció");
+Boolean d=NormalFunctions.ForValidation.decision(kcontext.getVariable("programfile"));
+kcontext.setVariable("validated", d);</script>
+    </scriptTask>
+    <task id="_10" name="ViewUncheckedApps" tns:taskName="ViewUncheckedApps" >
+      <ioSpecification>
+        <dataInput id="_10_URLInput" name="URL" />
+        <dataInput id="_10_MethodInput" name="Method" />
+        <dataOutput id="_10_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_10_URLInput</dataInputRefs>
+          <dataInputRefs>_10_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_10_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>osgiviewAddress</sourceRef>
+        <targetRef>_10_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_10_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_10_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_10_retOutput</sourceRef>
+        <targetRef>applist</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_11" name="DownloadApp" tns:taskName="DownloadApp" >
+      <ioSpecification>
+        <dataInput id="_11_AppIdInput" name="AppId" />
+        <dataInput id="_11_URLInput" name="URL" />
+        <dataInput id="_11_MethodInput" name="Method" />
+        <dataInput id="_11_URLInput" name="URL" />
+        <dataOutput id="_11_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_11_AppIdInput</dataInputRefs>
+          <dataInputRefs>_11_URLInput</dataInputRefs>
+          <dataInputRefs>_11_MethodInput</dataInputRefs>
+          <dataInputRefs>_11_URLInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_11_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>appid</sourceRef>
+        <targetRef>_11_AppIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>osgidownloadAddress</sourceRef>
+        <targetRef>_11_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_11_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">GET</from>
+          <to xsi:type="tFormalExpression">_11_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_11_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_11_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_11_retOutput</sourceRef>
+        <targetRef>programfile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_14" name="ValidateApp" tns:taskName="ValidateApp" >
+      <ioSpecification>
+        <dataInput id="_14_ProgDataInput" name="ProgData" />
+        <dataInput id="_14_URLInput" name="URL" />
+        <dataInput id="_14_MethodInput" name="Method" />
+        <dataOutput id="_14_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_14_ProgDataInput</dataInputRefs>
+          <dataInputRefs>_14_URLInput</dataInputRefs>
+          <dataInputRefs>_14_MethodInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_14_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>programfile</sourceRef>
+        <targetRef>_14_ProgDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>dotnetvalidateAddress</sourceRef>
+        <targetRef>_14_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_14_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">POST</from>
+          <to xsi:type="tFormalExpression">_14_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_14_retOutput</sourceRef>
+        <targetRef>validated</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_15" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_17" name="SetValidated" tns:taskName="SetValidated" >
+      <ioSpecification>
+        <dataInput id="_17_IsValidInput" name="IsValid" />
+        <dataInput id="_17_AppIdInput" name="AppId" />
+        <dataInput id="_17_URLInput" name="URL" />
+        <dataInput id="_17_MethodInput" name="Method" />
+        <dataInput id="_17_URLInput" name="URL" />
+        <dataOutput id="_17_retOutput" name="ret" />
+        <inputSet>
+          <dataInputRefs>_17_IsValidInput</dataInputRefs>
+          <dataInputRefs>_17_AppIdInput</dataInputRefs>
+          <dataInputRefs>_17_URLInput</dataInputRefs>
+          <dataInputRefs>_17_MethodInput</dataInputRefs>
+          <dataInputRefs>_17_URLInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_17_retOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>validated</sourceRef>
+        <targetRef>_17_IsValidInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>appid</sourceRef>
+        <targetRef>_17_AppIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>osgisetvalidatedAddress</sourceRef>
+        <targetRef>_17_URLInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_17_MethodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PUT</from>
+          <to xsi:type="tFormalExpression">_17_MethodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_17_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_17_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_17_retOutput</sourceRef>
+        <targetRef>validated</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_16" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <exclusiveGateway id="_19" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_18" name="Result" >
+      <script>if(kcontext.getVariable("validated")==true){
+	System.out.println("Az ellenörzés folyamata sikeresen befejezödött.");
+}
+if(kcontext.getVariable("validated")==false){
+	System.out.println("Az ellenörzés folyamata sikertelenül fejezödött be.");
+}</script>
+    </scriptTask>
+    <scriptTask id="_21" name="Not Valid" >
+      <script>System.out.println("Nem sikerült az automatikus validáció!");</script>
+    </scriptTask>
+    <exclusiveGateway id="_20" name="Gateway" gatewayDirection="Converging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_18-_2" sourceRef="_18" targetRef="_2" />
+    <sequenceFlow id="_1-_3" sourceRef="_1" targetRef="_3" />
+    <sequenceFlow id="_10-_5" sourceRef="_10" targetRef="_5" />
+    <sequenceFlow id="_19-_9" sourceRef="_19" targetRef="_9" name="valid" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return NormalFunctions.ForValidation.validtobool(kcontext.getVariable("validated"));</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_3-_10" sourceRef="_3" targetRef="_10" />
+    <sequenceFlow id="_15-_11" sourceRef="_15" targetRef="_11" name="download" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return kcontext.getVariable("appid")!=null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_11-_14" sourceRef="_11" targetRef="_14" />
+    <sequenceFlow id="_5-_15" sourceRef="_5" targetRef="_15" />
+    <sequenceFlow id="_20-_17" sourceRef="_20" targetRef="_17" />
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" name="end" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return kcontext.getVariable("appid")==null</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_14-_19" sourceRef="_14" targetRef="_19" />
+    <sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18" />
+    <sequenceFlow id="_19-_21" sourceRef="_19" targetRef="_21" name="not valid" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return NormalFunctions.ForValidation.validtobool(kcontext.getVariable("validated"))==false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_9-_20" sourceRef="_9" targetRef="_20" />
+    <sequenceFlow id="_21-_20" sourceRef="_21" targetRef="_20" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="hu.bme.mit.wf.validation" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="34" y="73" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="44" y="263" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="148" y="76" width="99" height="47" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="516" y="81" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="406" y="310" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="297" y="74" width="167" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="603" y="186" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="605" y="341" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="628" y="77" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="152" y="384" width="100" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="754" y="79" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="525" y="381" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="31" y="380" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="412" y="432" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="302" y="381" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_18-_2" >
+        <di:waypoint x="71" y="404" />
+        <di:waypoint x="68" y="287" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_3" >
+        <di:waypoint x="58" y="97" />
+        <di:waypoint x="197" y="99" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_5" >
+        <di:waypoint x="380" y="98" />
+        <di:waypoint x="556" y="105" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_9" >
+        <di:waypoint x="549" y="405" />
+        <di:waypoint x="446" y="334" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_10" >
+        <di:waypoint x="197" y="99" />
+        <di:waypoint x="380" y="98" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_11" >
+        <di:waypoint x="652" y="101" />
+        <di:waypoint x="653" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_14" >
+        <di:waypoint x="653" y="210" />
+        <di:waypoint x="655" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_15" >
+        <di:waypoint x="556" y="105" />
+        <di:waypoint x="652" y="101" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_17" >
+        <di:waypoint x="326" y="405" />
+        <di:waypoint x="202" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="652" y="101" />
+        <di:waypoint x="778" y="103" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_19" >
+        <di:waypoint x="655" y="365" />
+        <di:waypoint x="549" y="405" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_18" >
+        <di:waypoint x="202" y="408" />
+        <di:waypoint x="71" y="404" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_21" >
+        <di:waypoint x="549" y="405" />
+        <di:waypoint x="452" y="456" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_20" >
+        <di:waypoint x="446" y="334" />
+        <di:waypoint x="326" y="405" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_20" >
+        <di:waypoint x="452" y="456" />
+        <di:waypoint x="326" y="405" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

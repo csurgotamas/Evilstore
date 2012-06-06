@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="JBPM/jbpm"/>
+	<classpathentry kind="lib" path="jersey/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="jersey/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="jersey/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="jersey/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="jersey/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="jersey/jersey-client-1.12.jar"/>
+	<classpathentry kind="lib" path="jersey/jersey-core-1.12.jar"/>
+	<classpathentry kind="lib" path="jersey/jersey-json-1.12.jar"/>
+	<classpathentry kind="lib" path="jersey/jersey-server-1.12.jar"/>
+	<classpathentry kind="lib" path="jersey/jersey-servlet-1.12.jar"/>
+	<classpathentry kind="lib" path="jersey/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="jersey/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-bam-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-bpmn2-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-flow-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-flow-builder-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-human-task-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-persistence-jpa-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-test-5.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="jersey/jbpm-workitems-5.2.0.Final.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hu.bme.mit.evilsystem.entities"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hu.bme.mit.inf.evilstore.EvilGenius"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

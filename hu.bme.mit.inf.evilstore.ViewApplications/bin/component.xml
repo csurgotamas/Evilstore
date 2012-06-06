@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.bme.mit.inf.evilstore.ViewApplications">
+	<implementation class="hu.bme.mit.inf.evilstore.ViewApplications.interfaces.ViewServiceHelper"/>
+	<service>
+		<provide interface="hu.bme.mit.inf.evilstore.ViewApplications.interfaces.IViewService"/>
+	</service>
+</scr:component>
+

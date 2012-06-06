@@ -1,0 +1,15 @@
+import org.drools.process.core.datatype.impl.type.StringDataType;
+  
+[
+  [
+    "name" : "AppPay",
+    "parameters" : [
+      "URL" : new StringDataType(),
+      "AccountID": new StringDataType(),
+      "Ammount": new StringDataType(),
+      "Method" : new StringDataType()
+    ],
+    "displayName" : "AppPay",
+    "icon" : "icons/webservice.gif"
+  ]
+]

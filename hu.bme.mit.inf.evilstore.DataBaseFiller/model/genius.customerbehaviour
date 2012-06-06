@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customerBehaviour:CustomerBehaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:customerBehaviour="http://mit.bme.hu/mdsd/appstore/customer-behaviour">
+  <customers firstName="Joe" lastName="Martin" dateOfBirth="2000-03-14T00:00:00.000+0100">
+    <purchases date="2011-09-29T15:35:19.264+0200" app="//@developers.1/@authoredApps.1" atPrice="4.617"/>
+    <purchases date="2012-03-08T15:35:19.264+0100" app="//@developers.1/@authoredApps.4" atPrice="10.120000000000001"/>
+    <purchases date="2011-10-10T15:35:19.264+0200" app="//@developers.1/@authoredApps.6" atPrice="2.82"/>
+    <purchases date="2011-07-05T15:35:19.264+0200" app="//@developers.1/@authoredApps.8" atPrice="6.04"/>
+    <purchases date="2011-10-19T15:35:19.264+0200" app="//@developers.1/@authoredApps.10" atPrice="15.96"/>
+    <purchases date="2011-11-07T15:35:19.264+0100" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2012-04-21T15:35:19.265+0200" app="//@developers.1/@authoredApps.13" atPrice="1.52"/>
+    <purchases date="2011-09-16T15:35:19.265+0200" app="//@developers.1/@authoredApps.16" atPrice="8.47"/>
+    <purchases date="2011-12-03T15:35:19.265+0100" app="//@developers.1/@authoredApps.17" atPrice="1.695"/>
+    <purchases date="2011-12-01T15:35:19.265+0100" app="//@developers.1/@authoredApps.21"/>
+    <purchases date="2011-11-04T15:35:19.265+0100" app="//@developers.0/@authoredApps.4" atPrice="3.06"/>
+    <purchases date="2012-04-19T15:35:19.265+0200" app="//@developers.2/@authoredApps.2" atPrice="2.61"/>
+    <purchases date="2012-04-20T15:35:19.265+0200" app="//@developers.1/@authoredApps.15" atPrice="2.56"/>
+    <purchases date="2011-11-22T15:35:19.265+0100" app="//@developers.0/@authoredApps.11" atPrice="9.3"/>
+    <purchases date="2011-11-05T15:35:19.265+0100" app="//@developers.3/@authoredApps.1"/>
+    <purchases date="2012-01-26T15:35:19.265+0100" app="//@developers.3/@authoredApps.0" atPrice="12.06"/>
+    <purchases date="2012-02-17T15:35:19.266+0100" app="//@developers.0/@authoredApps.0" atPrice="2.814"/>
+    <purchases date="2011-11-10T15:35:19.266+0100" app="//@developers.0/@authoredApps.2" atPrice="5.2700000000000005"/>
+    <purchases date="2011-11-15T15:35:19.266+0100" app="//@developers.3/@authoredApps.5" atPrice="1.518"/>
+    <purchases date="2011-12-25T15:35:19.266+0100" app="//@developers.1/@authoredApps.7"/>
+    <purchases date="2012-04-18T15:35:19.266+0200" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2011-09-01T15:35:19.266+0200" app="//@developers.0/@authoredApps.16" atPrice="4.18"/>
+    <purchases date="2011-12-10T15:35:19.266+0100" app="//@developers.1/@authoredApps.19"/>
+    <purchases date="2011-09-25T15:35:19.266+0200" app="//@developers.1/@authoredApps.9" atPrice="15.1"/>
+    <purchases date="2011-09-16T15:35:19.266+0200" app="//@developers.3/@authoredApps.2" atPrice="6.8"/>
+    <purchases date="2011-09-22T15:35:19.266+0200" app="//@developers.2/@authoredApps.12" atPrice="0.378"/>
+    <purchases date="2011-08-05T15:35:19.267+0200" app="//@developers.2/@authoredApps.9" atPrice="11.27"/>
+    <purchases date="2011-07-23T15:35:19.267+0200" app="//@developers.0/@authoredApps.6" atPrice="1.43"/>
+    <purchases date="2012-01-25T15:35:19.267+0100" app="//@developers.0/@authoredApps.10" atPrice="3.72"/>
+    <purchases date="2011-09-28T15:35:19.267+0200" app="//@developers.2/@authoredApps.3" atPrice="11.85"/>
+    <purchases date="2011-11-09T15:35:19.267+0100" app="//@developers.0/@authoredApps.1" atPrice="14.07"/>
+  </customers>
+  <customers firstName="John" lastName="McIntyre" dateOfBirth="1994-03-14T00:00:00.000+0100">
+    <purchases date="2011-11-04T15:35:19.267+0100" app="//@developers.1/@authoredApps.4" atPrice="5.0600000000000005"/>
+    <purchases date="2012-02-21T15:35:19.267+0100" app="//@developers.2/@authoredApps.3" atPrice="11.85"/>
+    <purchases date="2012-04-15T15:35:19.267+0200" app="//@developers.4/@authoredApps.4" atPrice="5.21"/>
+    <purchases date="2011-08-18T15:35:19.267+0200" app="//@developers.1/@authoredApps.21"/>
+    <purchases date="2011-07-15T15:35:19.267+0200" app="//@developers.0/@authoredApps.7" atPrice="5.72"/>
+    <purchases date="2012-01-31T15:35:19.268+0100" app="//@developers.0/@authoredApps.10" atPrice="7.44"/>
+    <purchases date="2012-03-04T15:35:19.268+0100" app="//@developers.0/@authoredApps.12" atPrice="14.58"/>
+    <purchases date="2012-03-12T15:35:19.268+0100" app="//@developers.0/@authoredApps.16" atPrice="8.36"/>
+    <purchases date="2011-07-01T15:35:19.268+0200" app="//@developers.4/@authoredApps.5"/>
+    <purchases date="2012-04-19T15:35:19.268+0200" app="//@developers.0/@authoredApps.15" atPrice="5.0200000000000005"/>
+    <purchases date="2011-10-02T15:35:19.268+0200" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2011-11-01T15:35:19.268+0100" app="//@developers.3/@authoredApps.5" atPrice="5.0600000000000005"/>
+    <purchases date="2011-12-27T15:35:19.268+0100" app="//@developers.3/@authoredApps.7" atPrice="8.65"/>
+    <purchases date="2012-02-04T15:35:19.268+0100" app="//@developers.1/@authoredApps.12" atPrice="3.04"/>
+    <purchases date="2011-12-20T15:35:19.268+0100" app="//@developers.3/@authoredApps.3"/>
+    <purchases date="2011-08-14T15:35:19.268+0200" app="//@developers.3/@authoredApps.1"/>
+    <purchases date="2011-12-07T15:35:19.269+0100" app="//@developers.4/@authoredApps.8" atPrice="1.76"/>
+    <purchases date="2012-02-07T15:35:19.269+0100" app="//@developers.4/@authoredApps.7" atPrice="10.27"/>
+    <purchases date="2011-12-24T15:35:19.269+0100" app="//@developers.3/@authoredApps.9" atPrice="3.0500000000000003"/>
+    <purchases date="2011-10-18T15:35:19.269+0200" app="//@developers.1/@authoredApps.13" atPrice="1.52"/>
+    <purchases date="2011-07-15T15:35:19.269+0200" app="//@developers.1/@authoredApps.1" atPrice="4.617"/>
+    <purchases date="2011-08-02T15:35:19.269+0200" app="//@developers.0/@authoredApps.5" atPrice="1.53"/>
+  </customers>
+  <customers firstName="Jack" lastName="Monroe" dateOfBirth="1980-03-14T00:00:00.000+0100">
+    <purchases date="2011-07-03T15:35:19.269+0200" app="//@developers.3/@authoredApps.4"/>
+    <purchases date="2011-08-02T15:35:19.269+0200" app="//@developers.3/@authoredApps.8" atPrice="3.0500000000000003"/>
+    <purchases date="2012-03-06T15:35:19.270+0100" app="//@developers.4/@authoredApps.0" atPrice="16.16"/>
+    <purchases date="2012-02-27T15:35:19.270+0100" app="//@developers.4/@authoredApps.9" atPrice="2.64"/>
+    <purchases date="2012-03-28T15:35:19.270+0200" app="//@developers.2/@authoredApps.3" atPrice="5.925"/>
+    <purchases date="2012-03-05T15:35:19.270+0100" app="//@developers.0/@authoredApps.4" atPrice="1.53"/>
+    <purchases date="2012-01-10T15:35:19.270+0100" app="//@developers.1/@authoredApps.15" atPrice="2.56"/>
+    <purchases date="2011-06-30T15:35:19.270+0200" app="//@developers.0/@authoredApps.14" atPrice="5.41"/>
+    <purchases date="2011-12-18T15:35:19.270+0100" app="//@developers.1/@authoredApps.17" atPrice="3.39"/>
+    <purchases date="2011-08-29T15:35:19.270+0200" app="//@developers.3/@authoredApps.6" atPrice="14.41"/>
+    <purchases date="2011-11-28T15:35:19.270+0100" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2011-10-03T15:35:19.270+0200" app="//@developers.1/@authoredApps.4" atPrice="10.120000000000001"/>
+    <purchases date="2012-02-06T15:35:19.270+0100" app="//@developers.1/@authoredApps.3" atPrice="2.41"/>
+    <purchases date="2012-03-23T15:35:19.270+0100" app="//@developers.0/@authoredApps.8"/>
+    <purchases date="2011-11-06T15:35:19.271+0100" app="//@developers.2/@authoredApps.7" atPrice="12.98"/>
+    <purchases date="2011-08-21T15:35:19.271+0200" app="//@developers.1/@authoredApps.16" atPrice="8.47"/>
+    <purchases date="2011-12-27T15:35:19.271+0100" app="//@developers.1/@authoredApps.21"/>
+    <purchases date="2011-07-06T15:35:19.271+0200" app="//@developers.4/@authoredApps.4" atPrice="1.563"/>
+    <purchases date="2012-04-19T15:35:19.271+0200" app="//@developers.0/@authoredApps.2" atPrice="5.2700000000000005"/>
+  </customers>
+  <customers firstName="Jim" lastName="Morton" dateOfBirth="1984-03-14T00:00:00.000+0100">
+    <purchases date="2011-07-22T15:35:19.271+0200" app="//@developers.3/@authoredApps.0" atPrice="6.03"/>
+    <purchases date="2011-11-29T15:35:19.272+0100" app="//@developers.4/@authoredApps.6" atPrice="4.11"/>
+    <purchases date="2012-01-04T15:35:19.272+0100" app="//@developers.4/@authoredApps.0" atPrice="16.16"/>
+    <purchases date="2012-04-12T15:35:19.272+0200" app="//@developers.4/@authoredApps.1" atPrice="12.93"/>
+    <purchases date="2011-08-26T15:35:19.272+0200" app="//@developers.4/@authoredApps.4" atPrice="1.563"/>
+    <purchases date="2011-11-12T15:35:19.272+0100" app="//@developers.4/@authoredApps.9" atPrice="4.4"/>
+    <purchases date="2011-10-23T15:35:19.272+0200" app="//@developers.1/@authoredApps.2" atPrice="7.24"/>
+    <purchases date="2012-03-01T15:35:19.272+0100" app="//@developers.1/@authoredApps.20" atPrice="3.13"/>
+    <purchases date="2012-03-06T15:35:19.272+0100" app="//@developers.0/@authoredApps.1" atPrice="14.07"/>
+    <purchases date="2011-11-26T15:35:19.272+0100" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2012-03-31T15:35:19.272+0200" app="//@developers.0/@authoredApps.0" atPrice="9.38"/>
+    <purchases date="2012-04-20T15:35:19.272+0200" app="//@developers.0/@authoredApps.9" atPrice="6.45"/>
+    <purchases date="2011-07-16T15:35:19.272+0200" app="//@developers.2/@authoredApps.11" atPrice="2.52"/>
+    <purchases date="2011-09-15T15:35:19.272+0200" app="//@developers.2/@authoredApps.12" atPrice="0.378"/>
+    <purchases date="2012-03-09T15:35:19.273+0100" app="//@developers.1/@authoredApps.17" atPrice="3.39"/>
+    <purchases date="2012-04-06T15:35:19.273+0200" app="//@developers.0/@authoredApps.4" atPrice="3.06"/>
+    <purchases date="2011-09-26T15:35:19.273+0200" app="//@developers.3/@authoredApps.3"/>
+    <purchases date="2012-01-01T15:35:19.273+0100" app="//@developers.0/@authoredApps.13" atPrice="17.5"/>
+    <purchases date="2011-11-29T15:35:19.273+0100" app="//@developers.1/@authoredApps.12" atPrice="3.04"/>
+    <purchases date="2011-10-21T15:35:19.273+0200" app="//@developers.3/@authoredApps.9" atPrice="3.0500000000000003"/>
+    <purchases date="2011-11-24T15:35:19.273+0100" app="//@developers.1/@authoredApps.19"/>
+    <purchases date="2011-09-23T15:35:19.273+0200" app="//@developers.1/@authoredApps.6" atPrice="2.82"/>
+    <purchases date="2011-09-12T15:35:19.273+0200" app="//@developers.0/@authoredApps.8"/>
+    <purchases date="2012-01-30T15:35:19.273+0100" app="//@developers.3/@authoredApps.4"/>
+  </customers>
+  <customers firstName="Jeremy" lastName="Miles" dateOfBirth="1988-03-14T00:00:00.000+0100">
+    <purchases date="2011-11-06T15:35:19.274+0100" app="//@developers.4/@authoredApps.0" atPrice="16.16"/>
+    <purchases date="2011-11-19T15:35:19.274+0100" app="//@developers.4/@authoredApps.1" atPrice="6.465"/>
+    <purchases date="2011-11-13T15:35:19.274+0100" app="//@developers.4/@authoredApps.6" atPrice="2.055"/>
+    <purchases date="2012-02-01T15:35:19.274+0100" app="//@developers.4/@authoredApps.8" atPrice="1.76"/>
+    <purchases date="2011-08-29T15:35:19.274+0200" app="//@developers.2/@authoredApps.2" atPrice="2.61"/>
+    <purchases date="2011-07-01T15:35:19.274+0200" app="//@developers.3/@authoredApps.5" atPrice="5.0600000000000005"/>
+    <purchases date="2012-04-10T15:35:19.274+0200" app="//@developers.0/@authoredApps.3" atPrice="3.955"/>
+    <purchases date="2011-11-13T15:35:19.274+0100" app="//@developers.4/@authoredApps.5"/>
+    <purchases date="2011-07-12T15:35:19.274+0200" app="//@developers.1/@authoredApps.18" atPrice="2.0"/>
+    <purchases date="2012-02-12T15:35:19.274+0100" app="//@developers.1/@authoredApps.12" atPrice="3.04"/>
+    <purchases date="2011-08-31T15:35:19.274+0200" app="//@developers.4/@authoredApps.7" atPrice="5.135"/>
+    <purchases date="2011-12-02T15:35:19.275+0100" app="//@developers.0/@authoredApps.13" atPrice="17.5"/>
+    <purchases date="2011-12-27T15:35:19.275+0100" app="//@developers.0/@authoredApps.14" atPrice="2.705"/>
+    <purchases date="2011-12-22T15:35:19.275+0100" app="//@developers.3/@authoredApps.3"/>
+    <purchases date="2012-02-16T15:35:19.275+0100" app="//@developers.1/@authoredApps.1" atPrice="15.39"/>
+    <purchases date="2012-04-19T15:35:19.275+0200" app="//@developers.2/@authoredApps.11" atPrice="2.52"/>
+    <purchases date="2012-01-19T15:35:19.275+0100" app="//@developers.0/@authoredApps.4" atPrice="3.06"/>
+    <purchases date="2012-04-20T15:35:19.275+0200" app="//@developers.0/@authoredApps.16" atPrice="8.36"/>
+    <purchases date="2012-02-14T15:35:19.275+0100" app="//@developers.1/@authoredApps.7"/>
+    <purchases date="2011-12-11T15:35:19.275+0100" app="//@developers.3/@authoredApps.4"/>
+    <purchases date="2012-02-22T15:35:19.275+0100" app="//@developers.2/@authoredApps.3" atPrice="11.85"/>
+    <purchases date="2011-10-13T15:35:19.275+0200" app="//@developers.1/@authoredApps.19"/>
+    <purchases date="2012-04-17T15:35:19.275+0200" app="//@developers.1/@authoredApps.13" atPrice="0.76"/>
+    <purchases date="2012-01-18T15:35:19.275+0100" app="//@developers.1/@authoredApps.17" atPrice="3.39"/>
+    <purchases date="2011-09-21T15:35:19.276+0200" app="//@developers.0/@authoredApps.11" atPrice="9.3"/>
+    <purchases date="2011-12-20T15:35:19.276+0100" app="//@developers.2/@authoredApps.1" atPrice="5.22"/>
+    <purchases date="2011-07-26T15:35:19.276+0200" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2012-02-11T15:35:19.276+0100" app="//@developers.1/@authoredApps.21"/>
+    <purchases date="2011-09-14T15:35:19.276+0200" app="//@developers.2/@authoredApps.12" atPrice="1.26"/>
+    <purchases date="2012-03-27T15:35:19.276+0200" app="//@developers.0/@authoredApps.12" atPrice="4.374"/>
+    <purchases date="2012-03-14T15:35:19.276+0100" app="//@developers.0/@authoredApps.8"/>
+    <purchases date="2012-03-31T15:35:19.276+0200" app="//@developers.1/@authoredApps.5" atPrice="7.59"/>
+    <purchases date="2011-10-18T15:35:19.276+0200" app="//@developers.2/@authoredApps.8" atPrice="4.6739999999999995"/>
+    <purchases date="2012-03-19T15:35:19.276+0100" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2012-01-28T15:35:19.276+0100" app="//@developers.2/@authoredApps.0" atPrice="2.33"/>
+    <purchases date="2012-03-20T15:35:19.276+0100" app="//@developers.0/@authoredApps.15" atPrice="5.0200000000000005"/>
+    <purchases date="2011-08-31T15:35:19.276+0200" app="//@developers.4/@authoredApps.4" atPrice="5.21"/>
+    <purchases date="2011-08-15T15:35:19.276+0200" app="//@developers.4/@authoredApps.9" atPrice="8.8"/>
+    <purchases date="2011-08-31T15:35:19.276+0200" app="//@developers.0/@authoredApps.6" atPrice="1.43"/>
+    <purchases date="2011-08-31T15:35:19.277+0200" app="//@developers.0/@authoredApps.10" atPrice="7.44"/>
+    <purchases date="2011-10-26T15:35:19.277+0200" app="//@developers.0/@authoredApps.7" atPrice="5.72"/>
+    <purchases date="2011-12-02T15:35:19.277+0100" app="//@developers.3/@authoredApps.9" atPrice="3.0500000000000003"/>
+    <purchases date="2012-02-26T15:35:19.277+0100" app="//@developers.2/@authoredApps.10" atPrice="1.6889999999999998"/>
+    <purchases date="2011-07-08T15:35:19.277+0200" app="//@developers.0/@authoredApps.1" atPrice="14.07"/>
+    <purchases date="2011-08-15T15:35:19.277+0200" app="//@developers.4/@authoredApps.3" atPrice="4.848"/>
+    <purchases date="2012-01-23T15:35:19.277+0100" app="//@developers.0/@authoredApps.5" atPrice="1.53"/>
+    <purchases date="2012-01-26T15:35:19.277+0100" app="//@developers.1/@authoredApps.15" atPrice="1.28"/>
+    <purchases date="2012-01-02T15:35:19.277+0100" app="//@developers.2/@authoredApps.4" atPrice="9.870000000000001"/>
+    <purchases date="2011-07-20T15:35:19.277+0200" app="//@developers.1/@authoredApps.4" atPrice="10.120000000000001"/>
+    <purchases date="2011-10-08T15:35:19.277+0200" app="//@developers.0/@authoredApps.2" atPrice="5.2700000000000005"/>
+    <purchases date="2012-02-06T15:35:19.277+0100" app="//@developers.1/@authoredApps.0" atPrice="6.15"/>
+    <purchases date="2012-01-16T15:35:19.278+0100" app="//@developers.0/@authoredApps.0" atPrice="9.38"/>
+    <purchases date="2012-02-22T15:35:19.278+0100" app="//@developers.2/@authoredApps.6" atPrice="9.05"/>
+    <purchases date="2011-08-09T15:35:19.278+0200" app="//@developers.3/@authoredApps.2" atPrice="3.4"/>
+    <purchases date="2011-11-25T15:35:19.278+0100" app="//@developers.1/@authoredApps.8" atPrice="1.8119999999999998"/>
+    <purchases date="2011-09-14T15:35:19.278+0200" app="//@developers.2/@authoredApps.7" atPrice="12.98"/>
+    <purchases date="2012-02-07T15:35:19.278+0100" app="//@developers.1/@authoredApps.10" atPrice="15.96"/>
+    <purchases date="2011-11-16T15:35:19.278+0100" app="//@developers.3/@authoredApps.0" atPrice="12.06"/>
+    <purchases date="2012-02-18T15:35:19.278+0100" app="//@developers.1/@authoredApps.16" atPrice="4.235"/>
+    <purchases date="2012-03-07T15:35:19.278+0100" app="//@developers.2/@authoredApps.5" atPrice="3.0100000000000002"/>
+    <purchases date="2012-03-14T15:35:19.278+0100" app="//@developers.3/@authoredApps.7" atPrice="4.325"/>
+    <purchases date="2011-07-02T15:35:19.278+0200" app="//@developers.1/@authoredApps.2" atPrice="3.62"/>
+    <purchases date="2011-10-20T15:35:19.278+0200" app="//@developers.0/@authoredApps.9" atPrice="6.45"/>
+    <purchases date="2012-02-05T15:35:19.278+0100" app="//@developers.3/@authoredApps.8" atPrice="6.1000000000000005"/>
+    <purchases date="2012-04-06T15:35:19.279+0200" app="//@developers.1/@authoredApps.9" atPrice="15.1"/>
+    <purchases date="2011-10-07T15:35:19.279+0200" app="//@developers.3/@authoredApps.6" atPrice="14.41"/>
+    <purchases date="2011-11-24T15:35:19.279+0100" app="//@developers.2/@authoredApps.9" atPrice="3.381"/>
+    <purchases date="2011-12-10T15:35:19.279+0100" app="//@developers.3/@authoredApps.1"/>
+    <purchases date="2011-10-11T15:35:19.279+0200" app="//@developers.1/@authoredApps.6" atPrice="2.82"/>
+    <purchases date="2012-01-08T15:35:19.279+0100" app="//@developers.1/@authoredApps.14" atPrice="12.8"/>
+    <purchases date="2012-01-17T15:35:19.279+0100" app="//@developers.1/@authoredApps.20" atPrice="3.13"/>
+    <purchases date="2012-01-27T15:35:19.279+0100" app="//@developers.1/@authoredApps.3" atPrice="2.41"/>
+  </customers>
+  <customers firstName="Jill" lastName="Montgomery" dateOfBirth="1991-03-14T00:00:00.000+0100">
+    <purchases date="2012-04-07T15:35:19.280+0200" app="//@developers.0/@authoredApps.16" atPrice="8.36"/>
+    <purchases date="2011-12-31T15:35:19.280+0100" app="//@developers.1/@authoredApps.9" atPrice="4.529999999999999"/>
+    <purchases date="2012-04-16T15:35:19.280+0200" app="//@developers.4/@authoredApps.6" atPrice="4.11"/>
+    <purchases date="2012-02-14T15:35:19.280+0100" app="//@developers.4/@authoredApps.7" atPrice="10.27"/>
+    <purchases date="2012-01-18T15:35:19.280+0100" app="//@developers.4/@authoredApps.9" atPrice="8.8"/>
+    <purchases date="2012-03-01T15:35:19.280+0100" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2012-03-31T15:35:19.280+0200" app="//@developers.1/@authoredApps.18" atPrice="0.6"/>
+    <purchases date="2012-01-12T15:35:19.280+0100" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2011-10-28T15:35:19.280+0200" app="//@developers.0/@authoredApps.12" atPrice="7.29"/>
+    <purchases date="2011-12-31T15:35:19.281+0100" app="//@developers.2/@authoredApps.6" atPrice="4.525"/>
+    <purchases date="2011-10-02T15:35:19.281+0200" app="//@developers.0/@authoredApps.5" atPrice="1.53"/>
+    <purchases date="2012-04-21T15:35:19.281+0200" app="//@developers.2/@authoredApps.9" atPrice="11.27"/>
+    <purchases date="2012-03-13T15:35:19.281+0100" app="//@developers.1/@authoredApps.17" atPrice="3.39"/>
+    <purchases date="2011-10-08T15:35:19.281+0200" app="//@developers.1/@authoredApps.0" atPrice="6.15"/>
+    <purchases date="2012-04-15T15:35:19.281+0200" app="//@developers.1/@authoredApps.14" atPrice="6.4"/>
+    <purchases date="2012-02-14T15:35:19.281+0100" app="//@developers.3/@authoredApps.0" atPrice="3.618"/>
+    <purchases date="2011-11-08T15:35:19.281+0100" app="//@developers.2/@authoredApps.5" atPrice="3.0100000000000002"/>
+    <purchases date="2011-10-28T15:35:19.281+0200" app="//@developers.0/@authoredApps.7" atPrice="5.72"/>
+  </customers>
+  <customers firstName="Jane" lastName="Miller" dateOfBirth="1996-03-14T00:00:00.000+0100">
+    <purchases date="2011-08-24T15:35:19.281+0200" app="//@developers.3/@authoredApps.0" atPrice="6.03"/>
+    <purchases date="2012-01-18T15:35:19.282+0100" app="//@developers.2/@authoredApps.0" atPrice="2.33"/>
+    <purchases date="2011-10-30T15:35:19.282+0100" app="//@developers.2/@authoredApps.10" atPrice="5.63"/>
+    <purchases date="2012-04-19T15:35:19.282+0200" app="//@developers.2/@authoredApps.12" atPrice="1.26"/>
+    <purchases date="2011-07-14T15:35:19.282+0200" app="//@developers.0/@authoredApps.15" atPrice="1.506"/>
+    <purchases date="2012-02-08T15:35:19.282+0100" app="//@developers.0/@authoredApps.14" atPrice="5.41"/>
+    <purchases date="2012-04-12T15:35:19.282+0200" app="//@developers.4/@authoredApps.7" atPrice="10.27"/>
+    <purchases date="2012-02-06T15:35:19.282+0100" app="//@developers.2/@authoredApps.8" atPrice="15.58"/>
+    <purchases date="2011-08-29T15:35:19.282+0200" app="//@developers.3/@authoredApps.8" atPrice="6.1000000000000005"/>
+    <purchases date="2012-02-06T15:35:19.282+0100" app="//@developers.1/@authoredApps.20" atPrice="3.13"/>
+    <purchases date="2012-04-13T15:35:19.282+0200" app="//@developers.1/@authoredApps.3" atPrice="2.41"/>
+    <purchases date="2011-11-18T15:35:19.282+0100" app="//@developers.0/@authoredApps.9" atPrice="1.935"/>
+    <purchases date="2012-03-11T15:35:19.282+0100" app="//@developers.1/@authoredApps.16" atPrice="2.541"/>
+    <purchases date="2012-02-17T15:35:19.282+0100" app="//@developers.0/@authoredApps.2" atPrice="2.6350000000000002"/>
+    <purchases date="2011-07-23T15:35:19.282+0200" app="//@developers.1/@authoredApps.11"/>
+    <purchases date="2012-01-05T15:35:19.282+0100" app="//@developers.4/@authoredApps.8" atPrice="1.76"/>
+    <purchases date="2012-04-11T15:35:19.283+0200" app="//@developers.3/@authoredApps.2" atPrice="3.4"/>
+  </customers>
+  <customers firstName="Jennifer" lastName="May" dateOfBirth="1998-03-14T00:00:00.000+0100">
+    <purchases date="2011-08-06T15:35:19.283+0200" app="//@developers.1/@authoredApps.12" atPrice="0.9119999999999999"/>
+    <purchases date="2012-01-07T15:35:19.283+0100" app="//@developers.0/@authoredApps.16" atPrice="8.36"/>
+    <purchases date="2012-01-11T15:35:19.283+0100" app="//@developers.4/@authoredApps.3" atPrice="4.848"/>
+    <purchases date="2012-01-02T15:35:19.283+0100" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2011-08-26T15:35:19.283+0200" app="//@developers.1/@authoredApps.13" atPrice="1.52"/>
+    <purchases date="2011-10-01T15:35:19.283+0200" app="//@developers.0/@authoredApps.1" atPrice="14.07"/>
+    <purchases date="2011-09-26T15:35:19.283+0200" app="//@developers.0/@authoredApps.3" atPrice="7.91"/>
+    <purchases date="2012-02-06T15:35:19.283+0100" app="//@developers.0/@authoredApps.4" atPrice="3.06"/>
+    <purchases date="2012-02-22T15:35:19.283+0100" app="//@developers.0/@authoredApps.10" atPrice="7.44"/>
+    <purchases date="2012-04-12T15:35:19.284+0200" app="//@developers.0/@authoredApps.14" atPrice="5.41"/>
+    <purchases date="2011-09-23T15:35:19.284+0200" app="//@developers.3/@authoredApps.4"/>
+  </customers>
+  <customers firstName="Judith" lastName="Murray" dateOfBirth="1977-03-14T00:00:00.000+0100">
+    <purchases date="2012-01-10T15:35:19.285+0100" app="//@developers.0/@authoredApps.3" atPrice="7.91"/>
+    <purchases date="2011-08-07T15:35:19.285+0200" app="//@developers.0/@authoredApps.4" atPrice="1.53"/>
+    <purchases date="2011-10-11T15:35:19.285+0200" app="//@developers.0/@authoredApps.15" atPrice="5.0200000000000005"/>
+    <purchases date="2011-09-03T15:35:19.285+0200" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2011-11-12T15:35:19.285+0100" app="//@developers.0/@authoredApps.9" atPrice="6.45"/>
+    <purchases date="2012-03-08T15:35:19.285+0100" app="//@developers.1/@authoredApps.0" atPrice="6.15"/>
+    <purchases date="2012-02-15T15:35:19.286+0100" app="//@developers.1/@authoredApps.19"/>
+    <purchases date="2011-12-01T15:35:19.286+0100" app="//@developers.3/@authoredApps.5" atPrice="1.518"/>
+    <purchases date="2011-08-15T15:35:19.286+0200" app="//@developers.2/@authoredApps.5" atPrice="0.903"/>
+  </customers>
+  <customers firstName="Joanne" lastName="Mendel" dateOfBirth="2002-03-14T00:00:00.000+0100">
+    <purchases date="2011-12-14T15:35:19.286+0100" app="//@developers.0/@authoredApps.15" atPrice="5.0200000000000005"/>
+    <purchases date="2012-01-05T15:35:19.286+0100" app="//@developers.1/@authoredApps.9" atPrice="15.1"/>
+    <purchases date="2012-01-02T15:35:19.286+0100" app="//@developers.4/@authoredApps.2"/>
+    <purchases date="2012-03-11T15:35:19.286+0100" app="//@developers.0/@authoredApps.12" atPrice="4.374"/>
+    <purchases date="2011-09-11T15:35:19.286+0200" app="//@developers.1/@authoredApps.0" atPrice="6.15"/>
+    <purchases date="2011-12-21T15:35:19.287+0100" app="//@developers.1/@authoredApps.3" atPrice="2.41"/>
+    <purchases date="2012-01-19T15:35:19.287+0100" app="//@developers.1/@authoredApps.4" atPrice="10.120000000000001"/>
+    <purchases date="2011-08-13T15:35:19.287+0200" app="//@developers.1/@authoredApps.13" atPrice="1.52"/>
+    <purchases date="2012-02-23T15:35:19.287+0100" app="//@developers.1/@authoredApps.15" atPrice="2.56"/>
+    <purchases date="2011-08-28T15:35:19.287+0200" app="//@developers.1/@authoredApps.17" atPrice="3.39"/>
+    <purchases date="2011-12-03T15:35:19.287+0100" app="//@developers.1/@authoredApps.20" atPrice="3.13"/>
+    <purchases date="2012-01-27T15:35:19.287+0100" app="//@developers.0/@authoredApps.8"/>
+    <purchases date="2011-08-13T15:35:19.287+0200" app="//@developers.1/@authoredApps.12" atPrice="0.9119999999999999"/>
+    <purchases date="2011-10-31T15:35:19.287+0100" app="//@developers.0/@authoredApps.4" atPrice="1.53"/>
+    <purchases date="2011-09-17T15:35:19.287+0200" app="//@developers.3/@authoredApps.7" atPrice="8.65"/>
+    <purchases date="2011-11-21T15:35:19.287+0100" app="//@developers.0/@authoredApps.5" atPrice="1.53"/>
+    <purchases date="2012-01-21T15:35:19.287+0100" app="//@developers.0/@authoredApps.0" atPrice="9.38"/>
+    <purchases date="2012-04-01T15:35:19.287+0200" app="//@developers.3/@authoredApps.2" atPrice="3.4"/>
+    <purchases date="2012-02-29T15:35:19.287+0100" app="//@developers.4/@authoredApps.9" atPrice="8.8"/>
+    <purchases date="2011-07-24T15:35:19.287+0200" app="//@developers.4/@authoredApps.7" atPrice="10.27"/>
+  </customers>
+  <developers name="Just Worx Inc.">
+    <authoredApps title="Polar Smash Pro" ageRestriction="6" currentPrice="9.38" purchases="//@customers.0/@purchases.16 //@customers.3/@purchases.10 //@customers.4/@purchases.51 //@customers.9/@purchases.16"/>
+    <authoredApps title="Polar Smash Turbo" ageRestriction="6" currentPrice="14.07" purchases="//@customers.0/@purchases.30 //@customers.3/@purchases.8 //@customers.4/@purchases.43 //@customers.7/@purchases.5"/>
+    <authoredApps title="Polar Master Pro" ageRestriction="12" category="SOCIAL" currentPrice="5.2700000000000005" purchases="//@customers.0/@purchases.17 //@customers.2/@purchases.18 //@customers.4/@purchases.49 //@customers.6/@purchases.13"/>
+    <authoredApps title="Polar Master Turbo" ageRestriction="12" category="SOCIAL" currentPrice="7.91" purchases="//@customers.4/@purchases.6 //@customers.7/@purchases.6 //@customers.8/@purchases.0"/>
+    <authoredApps title="Polar Spice" category="OTHER" currentPrice="3.06" purchases="//@customers.0/@purchases.10 //@customers.2/@purchases.5 //@customers.3/@purchases.15 //@customers.4/@purchases.16 //@customers.7/@purchases.7 //@customers.8/@purchases.1 //@customers.9/@purchases.13"/>
+    <authoredApps title="Polar Spice Lite" category="OTHER" currentPrice="1.53" purchases="//@customers.1/@purchases.21 //@customers.4/@purchases.45 //@customers.5/@purchases.10 //@customers.9/@purchases.15"/>
+    <authoredApps title="Polar Widgets Lite" ageRestriction="12" category="NEWS_AND_WEATHER" currentPrice="1.43" purchases="//@customers.0/@purchases.27 //@customers.4/@purchases.38"/>
+    <authoredApps title="Polar Widgets Pro" ageRestriction="12" category="NEWS_AND_WEATHER" currentPrice="5.72" purchases="//@customers.1/@purchases.4 //@customers.4/@purchases.40 //@customers.5/@purchases.17"/>
+    <authoredApps title="Polar Connect Free" ageRestriction="18" category="OTHER" purchases="//@customers.2/@purchases.13 //@customers.3/@purchases.22 //@customers.4/@purchases.30 //@customers.9/@purchases.11"/>
+    <authoredApps title="Polar Connect" ageRestriction="18" category="OTHER" currentPrice="6.45" purchases="//@customers.3/@purchases.11 //@customers.4/@purchases.62 //@customers.6/@purchases.11 //@customers.8/@purchases.4"/>
+    <authoredApps title="Photon Take-o-mat Pro" ageRestriction="6" category="MULTIMEDIA" currentPrice="7.44" purchases="//@customers.0/@purchases.28 //@customers.1/@purchases.5 //@customers.4/@purchases.39 //@customers.7/@purchases.8"/>
+    <authoredApps title="Photon Take-o-mat Max" ageRestriction="6" category="MULTIMEDIA" currentPrice="9.3" purchases="//@customers.0/@purchases.13 //@customers.4/@purchases.24"/>
+    <authoredApps title="Photon Ultra Max" ageRestriction="21" category="GAME" currentPrice="14.58" purchases="//@customers.1/@purchases.6 //@customers.4/@purchases.29 //@customers.5/@purchases.8 //@customers.9/@purchases.3"/>
+    <authoredApps title="Photon Ultra Turbo" ageRestriction="21" category="GAME" currentPrice="17.5" purchases="//@customers.3/@purchases.17 //@customers.4/@purchases.11"/>
+    <authoredApps title="Weather Smash Max" ageRestriction="16" category="OTHER" currentPrice="5.41" purchases="//@customers.2/@purchases.7 //@customers.4/@purchases.12 //@customers.6/@purchases.5 //@customers.7/@purchases.9"/>
+    <authoredApps title="Pic Spice Touch" ageRestriction="21" category="GAME" currentPrice="5.0200000000000005" purchases="//@customers.1/@purchases.9 //@customers.4/@purchases.35 //@customers.6/@purchases.4 //@customers.8/@purchases.2 //@customers.9/@purchases.0"/>
+    <authoredApps title="Pic Spice Max" ageRestriction="21" category="GAME" currentPrice="8.36" purchases="//@customers.0/@purchases.21 //@customers.1/@purchases.7 //@customers.4/@purchases.17 //@customers.5/@purchases.0 //@customers.7/@purchases.1"/>
+  </developers>
+  <developers name="Team Racket">
+    <authoredApps title="Smart Manager" ageRestriction="6" currentPrice="6.15" purchases="//@customers.4/@purchases.50 //@customers.5/@purchases.13 //@customers.8/@purchases.5 //@customers.9/@purchases.4"/>
+    <authoredApps title="Smart Manager Max" ageRestriction="6" currentPrice="15.39" purchases="//@customers.0/@purchases.0 //@customers.1/@purchases.20 //@customers.4/@purchases.14"/>
+    <authoredApps title="Smart Renegade Turbo" ageRestriction="21" category="GAME" currentPrice="7.24" purchases="//@customers.3/@purchases.6 //@customers.4/@purchases.61"/>
+    <authoredApps title="Smart Renegade" ageRestriction="21" category="GAME" currentPrice="2.41" purchases="//@customers.2/@purchases.12 //@customers.4/@purchases.71 //@customers.6/@purchases.10 //@customers.9/@purchases.5"/>
+    <authoredApps title="Smart Take-o-mat Pro" ageRestriction="14" category="OTHER" currentPrice="10.120000000000001" purchases="//@customers.0/@purchases.1 //@customers.1/@purchases.0 //@customers.2/@purchases.11 //@customers.4/@purchases.48 //@customers.9/@purchases.6"/>
+    <authoredApps title="Smart Take-o-mat Touch" ageRestriction="14" category="OTHER" currentPrice="7.59" purchases="//@customers.4/@purchases.31"/>
+    <authoredApps title="Calendar Mistery Touch" currentPrice="2.82" purchases="//@customers.0/@purchases.2 //@customers.3/@purchases.21 //@customers.4/@purchases.68"/>
+    <authoredApps title="Calendar Mistery Free" purchases="//@customers.0/@purchases.19 //@customers.4/@purchases.18"/>
+    <authoredApps title="Quick Smash" ageRestriction="18" category="GAME" currentPrice="6.04" purchases="//@customers.0/@purchases.3 //@customers.4/@purchases.54"/>
+    <authoredApps title="Quick Smash Max" ageRestriction="18" category="GAME" currentPrice="15.1" purchases="//@customers.0/@purchases.23 //@customers.4/@purchases.64 //@customers.5/@purchases.1 //@customers.9/@purchases.1"/>
+    <authoredApps title="Workout Backup Max" ageRestriction="21" category="OTHER" currentPrice="15.96" purchases="//@customers.0/@purchases.4 //@customers.4/@purchases.56"/>
+    <authoredApps title="Workout Backup Free" ageRestriction="21" category="OTHER" purchases="//@customers.0/@purchases.5 //@customers.1/@purchases.10 //@customers.2/@purchases.10 //@customers.3/@purchases.9 //@customers.4/@purchases.33 //@customers.5/@purchases.5 //@customers.6/@purchases.14"/>
+    <authoredApps title="Workout Master" ageRestriction="16" category="GAME" currentPrice="3.04" purchases="//@customers.1/@purchases.13 //@customers.3/@purchases.18 //@customers.4/@purchases.9 //@customers.7/@purchases.0 //@customers.9/@purchases.12"/>
+    <authoredApps title="Workout Master Lite" ageRestriction="16" category="GAME" currentPrice="1.52" purchases="//@customers.0/@purchases.6 //@customers.1/@purchases.19 //@customers.4/@purchases.22 //@customers.7/@purchases.4 //@customers.9/@purchases.7"/>
+    <authoredApps title="Workout Studio Max" ageRestriction="6" category="TOOLS" currentPrice="12.8" purchases="//@customers.4/@purchases.69 //@customers.5/@purchases.14"/>
+    <authoredApps title="Workout Studio Lite" ageRestriction="6" category="TOOLS" currentPrice="2.56" purchases="//@customers.0/@purchases.12 //@customers.2/@purchases.6 //@customers.4/@purchases.46 //@customers.9/@purchases.8"/>
+    <authoredApps title="Workout Player Max" ageRestriction="21" currentPrice="8.47" purchases="//@customers.0/@purchases.7 //@customers.2/@purchases.15 //@customers.4/@purchases.58 //@customers.6/@purchases.12"/>
+    <authoredApps title="Workout Player" ageRestriction="21" currentPrice="3.39" purchases="//@customers.0/@purchases.8 //@customers.2/@purchases.8 //@customers.3/@purchases.14 //@customers.4/@purchases.23 //@customers.5/@purchases.12 //@customers.9/@purchases.9"/>
+    <authoredApps title="Workout Bowl Lite" ageRestriction="12" category="TOOLS" currentPrice="2.0" purchases="//@customers.4/@purchases.8 //@customers.5/@purchases.6"/>
+    <authoredApps title="Workout Bowl Free" ageRestriction="12" category="TOOLS" purchases="//@customers.0/@purchases.22 //@customers.3/@purchases.20 //@customers.4/@purchases.21 //@customers.8/@purchases.6"/>
+    <authoredApps title="Workout Purge Touch" ageRestriction="6" category="OTHER" currentPrice="3.13" purchases="//@customers.3/@purchases.7 //@customers.4/@purchases.70 //@customers.6/@purchases.9 //@customers.9/@purchases.10"/>
+    <authoredApps title="Workout Purge Free" ageRestriction="6" category="OTHER" purchases="//@customers.0/@purchases.9 //@customers.1/@purchases.3 //@customers.2/@purchases.16 //@customers.4/@purchases.27"/>
+  </developers>
+  <developers name="Bugful Software">
+    <authoredApps title="Rainbow Backup Lite" ageRestriction="6" category="NEWS_AND_WEATHER" currentPrice="2.33" purchases="//@customers.4/@purchases.34 //@customers.6/@purchases.1"/>
+    <authoredApps title="Mail Master" ageRestriction="21" category="OTHER" currentPrice="5.22" purchases="//@customers.4/@purchases.25"/>
+    <authoredApps title="Mail Master Lite" ageRestriction="21" category="OTHER" currentPrice="2.61" purchases="//@customers.0/@purchases.11 //@customers.4/@purchases.4"/>
+    <authoredApps title="Mail Player Turbo" ageRestriction="16" category="OTHER" currentPrice="11.85" purchases="//@customers.0/@purchases.29 //@customers.1/@purchases.1 //@customers.2/@purchases.4 //@customers.4/@purchases.20"/>
+    <authoredApps title="Mail Player Max" ageRestriction="16" category="OTHER" currentPrice="9.870000000000001" purchases="//@customers.4/@purchases.47"/>
+    <authoredApps title="Note Renegade" category="NEWS_AND_WEATHER" currentPrice="3.0100000000000002" purchases="//@customers.4/@purchases.59 //@customers.5/@purchases.16 //@customers.8/@purchases.8"/>
+    <authoredApps title="Note Renegade Turbo" category="NEWS_AND_WEATHER" currentPrice="9.05" purchases="//@customers.4/@purchases.52 //@customers.5/@purchases.9"/>
+    <authoredApps title="Note Player Max" ageRestriction="14" category="SOCIAL" currentPrice="12.98" purchases="//@customers.2/@purchases.14 //@customers.4/@purchases.55"/>
+    <authoredApps title="Note Player Turbo" ageRestriction="14" category="SOCIAL" currentPrice="15.58" purchases="//@customers.4/@purchases.32 //@customers.6/@purchases.7"/>
+    <authoredApps title="Note Connect Pro" ageRestriction="6" category="OTHER" currentPrice="11.27" purchases="//@customers.0/@purchases.26 //@customers.4/@purchases.66 //@customers.5/@purchases.11"/>
+    <authoredApps title="Note Connect" ageRestriction="6" category="OTHER" currentPrice="5.63" purchases="//@customers.4/@purchases.42 //@customers.6/@purchases.2"/>
+    <authoredApps title="Thunder Renegade" ageRestriction="14" category="OTHER" currentPrice="2.52" purchases="//@customers.3/@purchases.12 //@customers.4/@purchases.15"/>
+    <authoredApps title="Thunder Renegade Lite" ageRestriction="14" category="OTHER" currentPrice="1.26" purchases="//@customers.0/@purchases.25 //@customers.3/@purchases.13 //@customers.4/@purchases.28 //@customers.6/@purchases.3"/>
+  </developers>
+  <developers name="Nadir Corp.">
+    <authoredApps title="Action Purge Turbo" ageRestriction="14" category="TOOLS" currentPrice="12.06" purchases="//@customers.0/@purchases.15 //@customers.3/@purchases.0 //@customers.4/@purchases.57 //@customers.5/@purchases.15 //@customers.6/@purchases.0"/>
+    <authoredApps title="Action Purge Free" ageRestriction="14" category="TOOLS" purchases="//@customers.0/@purchases.14 //@customers.1/@purchases.15 //@customers.4/@purchases.67"/>
+    <authoredApps title="Venue Connect Touch" ageRestriction="14" category="SOCIAL" currentPrice="6.8" purchases="//@customers.0/@purchases.24 //@customers.4/@purchases.53 //@customers.6/@purchases.16 //@customers.9/@purchases.17"/>
+    <authoredApps title="Venue Connect Free" ageRestriction="14" category="SOCIAL" purchases="//@customers.1/@purchases.14 //@customers.3/@purchases.16 //@customers.4/@purchases.13"/>
+    <authoredApps title="Musical Purge Free" ageRestriction="21" category="SOCIAL" purchases="//@customers.2/@purchases.0 //@customers.3/@purchases.23 //@customers.4/@purchases.19 //@customers.7/@purchases.10"/>
+    <authoredApps title="Musical Purge" ageRestriction="21" category="SOCIAL" currentPrice="5.0600000000000005" purchases="//@customers.0/@purchases.18 //@customers.1/@purchases.11 //@customers.4/@purchases.5 //@customers.8/@purchases.7"/>
+    <authoredApps title="Air Bowl Max" currentPrice="14.41" purchases="//@customers.2/@purchases.9 //@customers.4/@purchases.65"/>
+    <authoredApps title="Air Bowl Touch" currentPrice="8.65" purchases="//@customers.1/@purchases.12 //@customers.4/@purchases.60 //@customers.9/@purchases.14"/>
+    <authoredApps title="Air Power" category="GAME" currentPrice="6.1000000000000005" purchases="//@customers.2/@purchases.1 //@customers.4/@purchases.63 //@customers.6/@purchases.8"/>
+    <authoredApps title="Air Power Lite" category="GAME" currentPrice="3.0500000000000003" purchases="//@customers.1/@purchases.18 //@customers.3/@purchases.19 //@customers.4/@purchases.41"/>
+  </developers>
+  <developers name="Tseva Soft">
+    <authoredApps title="History Combo Max" ageRestriction="21" currentPrice="16.16" purchases="//@customers.2/@purchases.2 //@customers.3/@purchases.2 //@customers.4/@purchases.0"/>
+    <authoredApps title="History Combo Pro" ageRestriction="21" currentPrice="12.93" purchases="//@customers.3/@purchases.3 //@customers.4/@purchases.1"/>
+    <authoredApps title="History Blaster Free" ageRestriction="12" category="GAME" purchases="//@customers.0/@purchases.20 //@customers.4/@purchases.26 //@customers.5/@purchases.7 //@customers.7/@purchases.3 //@customers.8/@purchases.3 //@customers.9/@purchases.2"/>
+    <authoredApps title="History Blaster Turbo" ageRestriction="12" category="GAME" currentPrice="16.16" purchases="//@customers.4/@purchases.44 //@customers.7/@purchases.2"/>
+    <authoredApps title="News Connect Pro" ageRestriction="21" category="OTHER" currentPrice="5.21" purchases="//@customers.1/@purchases.2 //@customers.2/@purchases.17 //@customers.3/@purchases.4 //@customers.4/@purchases.36"/>
+    <authoredApps title="News Connect Free" ageRestriction="21" category="OTHER" purchases="//@customers.1/@purchases.8 //@customers.4/@purchases.7"/>
+    <authoredApps title="Instant Master" ageRestriction="21" category="TOOLS" currentPrice="4.11" purchases="//@customers.3/@purchases.1 //@customers.4/@purchases.2 //@customers.5/@purchases.2"/>
+    <authoredApps title="Instant Master Max" ageRestriction="21" category="TOOLS" currentPrice="10.27" purchases="//@customers.1/@purchases.17 //@customers.4/@purchases.10 //@customers.5/@purchases.3 //@customers.6/@purchases.6 //@customers.9/@purchases.19"/>
+    <authoredApps title="Flash Studio Lite" ageRestriction="21" category="TOOLS" currentPrice="1.76" purchases="//@customers.1/@purchases.16 //@customers.4/@purchases.3 //@customers.6/@purchases.15"/>
+    <authoredApps title="Flash Studio Max" ageRestriction="21" category="TOOLS" currentPrice="8.8" purchases="//@customers.2/@purchases.3 //@customers.3/@purchases.5 //@customers.4/@purchases.37 //@customers.5/@purchases.4 //@customers.9/@purchases.18"/>
+  </developers>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.0" score="1.0"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.1" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.2" score="0.4049586776859504"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.3" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.4" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.5" score="0.37869822485207105"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.6" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.7" score="0.4049586776859504"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.8" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.0" customer2="//@customers.9" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.0" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.1" score="1.0"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.2" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.3" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.4" score="0.1111111111111111"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.5" score="0.28444444444444444"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.6" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.7" score="0.18367346938775508"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.8" score="0.16000000000000003"/>
+  <similarityScores customer1="//@customers.1" customer2="//@customers.9" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.0" score="0.4049586776859504"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.1" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.2" score="1.0"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.3" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.4" score="0.08163265306122448"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.5" score="0.16000000000000003"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.6" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.7" score="0.25"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.8" score="0.07111111111111111"/>
+  <similarityScores customer1="//@customers.2" customer2="//@customers.9" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.0" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.1" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.2" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.3" score="1.0"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.4" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.5" score="0.4444444444444444"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.6" score="0.20661157024793386"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.7" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.8" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.3" customer2="//@customers.9" score="0.1111111111111111"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.0" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.1" score="0.1111111111111111"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.2" score="0.08163265306122448"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.3" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.4" score="1.0"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.5" score="0.37869822485207105"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.6" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.7" score="0.25"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.8" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.4" customer2="//@customers.9" score="0.09467455621301776"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.0" score="0.37869822485207105"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.1" score="0.28444444444444444"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.2" score="0.16000000000000003"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.3" score="0.4444444444444444"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.4" score="0.37869822485207105"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.5" score="1.0"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.6" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.7" score="0.25"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.8" score="0.140625"/>
+  <similarityScores customer1="//@customers.5" customer2="//@customers.9" score="0.18367346938775508"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.0" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.1" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.2" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.3" score="0.20661157024793386"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.4" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.5" score="0.28994082840236685"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.6" score="1.0"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.7" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.8" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.6" customer2="//@customers.9" score="0.36"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.0" score="0.4049586776859504"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.1" score="0.18367346938775508"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.2" score="0.25"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.3" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.4" score="0.25"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.5" score="0.25"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.6" score="0.48999999999999994"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.7" score="1.0"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.8" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.7" customer2="//@customers.9" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.0" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.1" score="0.16000000000000003"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.2" score="0.07111111111111111"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.3" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.4" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.5" score="0.140625"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.6" score="0.14792899408284024"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.7" score="0.21301775147928997"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.8" score="1.0"/>
+  <similarityScores customer1="//@customers.8" customer2="//@customers.9" score="0.08163265306122448"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.0" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.1" score="0.12755102040816327"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.2" score="0.29752066115702475"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.3" score="0.1111111111111111"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.4" score="0.09467455621301776"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.5" score="0.18367346938775508"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.6" score="0.36"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.7" score="0.17361111111111113"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.8" score="0.08163265306122448"/>
+  <similarityScores customer1="//@customers.9" customer2="//@customers.9" score="1.0"/>
+</customerBehaviour:CustomerBehaviour>
