@@ -1,5 +1,4 @@
-<p>
-Fault Tolerant Systems Research Group: <br />
+<p>Fault Tolerant Systems Research Group: <br />
  http://www.inf.mit.bme.hu/en  <br />
 EMF-IncQuery: <br />
  http://viatra.inf.mit.bme.hu/incquery <br />
