@@ -5,10 +5,10 @@ EMF-IncQuery: <br />
  http://viatra.inf.mit.bme.hu/incquery <br />
 Assignment: <br />
  http://www.inf.mit.bme.hu/edu/courses/mdsd/homework
- <br /> 
+ <br /> </p>
  
 ### Technologies of the code generation project:
-Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
+<p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtent: http://www.eclipse.org/xtext/ <br />
 Xtend: http://www.eclipse.org/xtend/ <br /></p>
 
