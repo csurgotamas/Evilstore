@@ -17,7 +17,7 @@ Java Persistence API: http://www.oracle.com/technetwork/articles/javaee/jpa-1371
 <p>JBoss-Drools: http://www.jboss.org/drools <br />
 Business Process Model and Notation: http://bpmn.org/ <br />
 JBoss-jBPM:  http://www.jboss.org/jbpm <br />
-
+ <br />
 Fault Tolerant Systems Research Group: <br />
  http://www.inf.mit.bme.hu/en  <br />
 EMF-IncQuery: <br />
