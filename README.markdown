@@ -1,3 +1,4 @@
+### [WIKIPAGE](https://github.com/csurgotamas/Evilstore/wiki/Evilstore)
 <p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtent: http://www.eclipse.org/xtext/ <br />
 Xtend: http://www.eclipse.org/xtend/ <br /></p>
