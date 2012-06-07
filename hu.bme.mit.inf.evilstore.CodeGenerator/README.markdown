@@ -1,8 +1,8 @@
-<p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/
-Xtent: http://www.eclipse.org/xtext/
-Xtend: http://www.eclipse.org/xtend/</p>
+<p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
+Xtent: http://www.eclipse.org/xtext/ <br />
+Xtend: http://www.eclipse.org/xtend/ <br /></p>
 
-# In the generated code the following technologies are used:
+### In the generated code the following technologies are used:
 JAX-RS: http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html 
 OSGi: http://www.osgi.org/
 Windows Communication Foundation (WCF): http://msdn.microsoft.com/en-us/netframework/aa663324.aspx
@@ -13,7 +13,7 @@ GlassFish Jersey: http://jersey.java.net/
 Apache Derby: http://db.apache.org/derby/
 Java Persistence API: http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html
 
-# Integration technologies:
+### Integration technologies:
 JBoss-Drools: http://www.jboss.org/drools
 Business Process Model and Notation: http://bpmn.org/
 JBoss-jBPM:  http://www.jboss.org/jbpm
