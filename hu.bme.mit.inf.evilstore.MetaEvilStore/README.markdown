@@ -6,12 +6,12 @@ Assignment: <br />
  http://www.inf.mit.bme.hu/edu/courses/mdsd/homework
  <br />
 <h3>Technologies of the code generation project:</h3><br />
-<p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
+Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtent: http://www.eclipse.org/xtext/ <br />
-Xtend: http://www.eclipse.org/xtend/ <br /></p>
-
-### In the generated code the following technologies are used:
-<p>JAX-RS: http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html <br />
+Xtend: http://www.eclipse.org/xtend/ <br />
+<br />
+<h3>In the generated code the following technologies are used:</h3><br />
+JAX-RS: http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html <br />
 OSGi: http://www.osgi.org/ <br />
 Windows Communication Foundation (WCF): http://msdn.microsoft.com/en-us/netframework/aa663324.aspx <br />
 JSON: http://www.json.org/ <br />
