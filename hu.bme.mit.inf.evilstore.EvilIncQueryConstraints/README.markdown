@@ -3,8 +3,7 @@
 EMF-IncQuery: <br />
  http://viatra.inf.mit.bme.hu/incquery <br />
 Assignment: <br />
- http://www.inf.mit.bme.hu/edu/courses/mdsd/homework
- <br /></p>
+ http://www.inf.mit.bme.hu/edu/courses/mdsd/homework</p>
  
 ### Technologies: 
 <p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
