@@ -5,6 +5,7 @@ EMF-IncQuery: <br />
 Assignment: <br />
  http://www.inf.mit.bme.hu/edu/courses/mdsd/homework
  <br />
+### Technologies: 
 Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtent: http://www.eclipse.org/xtext/ <br />
 Xtend: http://www.eclipse.org/xtend/ <br />
