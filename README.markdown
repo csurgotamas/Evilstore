@@ -8,6 +8,8 @@ EMF-IncQuery: <br />
 Assignment: <br />
  http://www.inf.mit.bme.hu/edu/courses/mdsd/homework</p>
 
+All code in this repository is available under the [Eclipse Public License v1.0](http://www.eclipse.org/legal/epl-v10.html).
+
 ### Technologies of the code generation project:
 <p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtext: http://www.eclipse.org/xtext/ <br />
