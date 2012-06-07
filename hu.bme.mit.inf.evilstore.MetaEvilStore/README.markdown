@@ -1,4 +1,12 @@
-<p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
+<p>
+Fault Tolerant Systems Research Group: <br />
+ http://www.inf.mit.bme.hu/en  <br />
+EMF-IncQuery: <br />
+ http://viatra.inf.mit.bme.hu/incquery <br />
+Assignment: <br />
+ http://www.inf.mit.bme.hu/edu/courses/mdsd/homework
+ <br /> 
+Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtent: http://www.eclipse.org/xtext/ <br />
 Xtend: http://www.eclipse.org/xtend/ <br /></p>
 
@@ -12,13 +20,6 @@ Newton-JSON: http://james.newtonking.com/projects/json-net.aspx <br />
 GlassFish Jersey: http://jersey.java.net/ <br />
 Apache Derby: http://db.apache.org/derby/ <br />
 Java Persistence API: http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html <br /></p>
-
- <br />
-Fault Tolerant Systems Research Group: <br />
- http://www.inf.mit.bme.hu/en  <br />
-EMF-IncQuery: <br />
- http://viatra.inf.mit.bme.hu/incquery <br />
-Assignment: <br />
- http://www.inf.mit.bme.hu/edu/courses/mdsd/homework</p>
+</p>
 
 

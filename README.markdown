@@ -1,4 +1,13 @@
 ### [WIKIPAGE](https://github.com/csurgotamas/Evilstore/wiki/Evilstore)
+[Slides](http://www.slideshare.net/csurnyak/mdsd-elads)
+[Screencast](http://www.youtube.com/watch?v=KZEWUtTEcdo)
+<p>Fault Tolerant Systems Research Group: <br />
+ http://www.inf.mit.bme.hu/en  <br />
+EMF-IncQuery: <br />
+ http://viatra.inf.mit.bme.hu/incquery <br />
+Assignment: <br />
+ http://www.inf.mit.bme.hu/edu/courses/mdsd/homework</p>
+
 <p>Eclipse Modeling Framework: http://www.eclipse.org/modeling/emf/ <br />
 Xtext: http://www.eclipse.org/xtext/ <br />
 Xtend: http://www.eclipse.org/xtend/ <br /></p>
@@ -17,13 +26,7 @@ Java Persistence API: http://www.oracle.com/technetwork/articles/javaee/jpa-1371
 ### Integration technologies:
 <p>JBoss-Drools: http://www.jboss.org/drools <br />
 Business Process Model and Notation: http://bpmn.org/ <br />
-JBoss-jBPM:  http://www.jboss.org/jbpm <br />
- <br />
-Fault Tolerant Systems Research Group: <br />
- http://www.inf.mit.bme.hu/en  <br />
-EMF-IncQuery: <br />
- http://viatra.inf.mit.bme.hu/incquery <br />
-Assignment: <br />
- http://www.inf.mit.bme.hu/edu/courses/mdsd/homework</p>
+JBoss-jBPM:  http://www.jboss.org/jbpm <br /></p>
+
 
 
